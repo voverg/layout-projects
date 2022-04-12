@@ -9,7 +9,10 @@
 }
 
 :root {
-  --blue: #3c485f;
+  --blue: #3596F5;
+  --brown: #635854;
+  --grey: #D7D7D7;
+  --white: #ffffff;
 }
 
 *,
@@ -20,7 +23,15 @@
   padding: 0;
 }
 
-body, a {
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+a {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -32,8 +43,8 @@ body, a {
 }
 
 .header {
-  background-color: #635854;
-  border-bottom: 4px solid #3596F5;
+  background-color: var(--brown);
+  border-bottom: 4px solid var(--blue);
 }
 
 .navbar {
@@ -44,7 +55,7 @@ body, a {
 .navbar__logo {
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-size: 1.5rem;
   text-align: center;
 }
@@ -65,11 +76,11 @@ body, a {
 }
 .navbar__link {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   transition: .3s ease;
 }
 .navbar__link:hover {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white);
 }
 
 .navbar__contact {
@@ -78,13 +89,13 @@ body, a {
 }
 .navbar__text {
   display:block;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 4px;
   font-size: 14px;
   line-height: 16px;
 }
 .navbar__phone {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
   font-size: 17px;
@@ -92,10 +103,15 @@ body, a {
 }
 /* HEADER ENDS */
 
+/*MAIN*/
+.main {
+  flex-grow: 1;
+}
+
 /*FOOTER*/
 .footer {
-  background-color: #D7D7D7;
-  border-top: 4px solid #3596F5;
+  background-color: var(--grey);
+  border-top: 4px solid var(--blue);
 
 }
 .footer__block {
@@ -110,13 +126,13 @@ body, a {
 }
 .footer__text {
   display:block;
-  color: #635854;
+  color: var(--brown);
   padding-bottom: 4px;
   font-size: 14px;
   line-height: 16px;
 }
 .footer__phone {
-  color: #635854;
+  color: var(--brown);
   text-decoration: none;
   font-weight: bold;
   font-size: 17px;
@@ -127,19 +143,32 @@ body, a {
 .conditions__link {
   display: block;
   padding: 3px 10px;
-  color: #635854;
+  color: var(--brown);
   font-size: 16px;
   line-height: 19px;
+  transition: .3 ease;
 }
+.conditions__link:hover {
+  opacity: .7;
+}
+
 .social {
 }
 .social__link {
   text-decoration: none;
   margin: 0 0.7rem;
+  transition: .3 ease;
+}
+.social__link:hover {
+  opacity: .7;
+}
+.social__img {
+  width: 20px;
+  height: 20px;
 }
 
 .author {
-  color: #635854;
+  color: var(--brown);
   text-align: center;
 }
 .author__link {
@@ -147,7 +176,7 @@ body, a {
   transition: .3s ease;
 }
 .author__link:hover {
-  text-shadow: 0 0 2px #635854;
+  text-shadow: 0 0 2px var(--brown);
 }
 
 
