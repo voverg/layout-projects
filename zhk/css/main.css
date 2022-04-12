@@ -50,13 +50,18 @@ body, a {
 }
 
 .navbar__menu {
+  flex-grow: 1;
   list-style:none;
   display:flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  text-align:center;
   padding: 0 35px;
+  max-width: 700px;
+  text-align: center;
+}
+.navbar__item {
+  flex-grow: 1;
 }
 .navbar__link {
   text-decoration: none;
@@ -68,7 +73,6 @@ body, a {
 }
 
 .navbar__contact {
-  flex-grow: 1;
   flex-shrink: 0;
   text-align: right;
 }
@@ -151,9 +155,6 @@ body, a {
   .navbar {
     flex-wrap: wrap;
   }
-/*  .navbar__logo {
-    width: 100%;
-  }*/
   .navbar__menu {
     width: 100%;
     padding: 20px 10px;
