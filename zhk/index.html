@@ -43,11 +43,56 @@
     <!-- /.navbar -->
   </header>
 
-  <main class="main"></main>
+  <main class="main container">
+    <div class="main__img">
+      <svg class="home-img" width="734" height="640" viewBox="0 0 734 640" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect width="734" height="640" fill="url(#pattern0)"/>
+
+        <defs>
+          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0" transform="translate(-0.00408719) scale(0.0013624 0.0015625)"/>
+          </pattern>
+          <image id="image0" width="740" height="640" xlink:href="img/home.png"/>
+        </defs>
+
+        <path data-floor="02" d="M222 532L442.8 540L512 526.3V548L443.5 567.7L222 556.7V532Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="03" d="M223 531V506L443.3 509.3L513 506V526L443.7 539L223 531Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="04" d="M223 505V480H444H513V503L445 510L223 505Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="05" d="M223 481V456L444.3 452.3L512 459V481H444" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="06" d="M223 455V429L444.5 425.7L513 436.7V458L444 451.3L223 455Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="07" d="M222 428V404.3L443 392L514 415V436.3L443 424L222 428Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="08" d="M222 406V381L444.2 364.7L514 393.3V414L443.7 392.3L222 406Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="09" d="M222 381V356L444.5 335.7L514 372.3V393L442 364.3L222 381Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="10" d="M222 355V331L445 306.3L514 350.3V372L444.7 334L222 355Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="11" d="M222 330V306L444.5 277.3L514 328.3V349L443.7 306.7L222 330Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="12" d="M221 306V282L443.3 249L514 308.3V328L444 277.3L221 306Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="13" d="M222 281V257L443.2 222L513 286V307L444.3 248.7L222 281Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="14" d="M222 257V232L444.3 194L513 264.3V285L444 221L222 257Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="15" d="M222 231V206L442.8 162.3L513 241.3V264L444 190.7L222 231Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="16" d="M223 207V182L443 134L513 219V242L442.3 162.7L223 207Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="17" d="M222 182V157L441.8 105L513 197.3V220L443.3 133.7L222 182Z" fill="#3595F6" fill-opacity="0.75"/>
+        <path data-floor="18" d="M222 157V131L444 74.3L513 176V197L443.7 105.3L222 157Z" fill="#3595F6" fill-opacity="0.75"/>
+      </svg>
+    </div>
+
+    <div class="main__info">
+      <h2 class="main__title">Выберите желаемый этаж</h2>
+      <div class="counter">
+        <button class="btn counter__btn counter__btn--up">
+          <img class="counter__arrow counter__arrow--up" src="img/arrow.svg" alt="arrow up">
+        </button>
+        <span class="counter__value">02</span>
+        <button class="btn counter__btn counter__btn--down">
+          <img class="counter__arrow counter__arrow--down" src="img/arrow.svg" alt="arrow down">
+        </button>
+      </div>
+      <div class="btn btn-primary view-flats">Смотреть квартиры на этаже</div>
+    </div>
+  </main>
 
   <footer class="footer">
     <div class="footer__block container">
-      <img src="img/footer-logo.png" alt="ЖК Владимир">
+      <img src="img/footer-logo.png" class="footer__logo" alt="ЖК Владимир">
       <div class="footer__contact">
         <span class="footer__text">Позвоните нам:</span>
         <a class="footer__phone" href="tel:+71234567890">8 (123) 456-78-90</a>
@@ -75,12 +120,6 @@
 
     <p class="author container">Created by <a href="https://github.com/voverg" class="author__link" rel="noopener noreferrer" target="_blank">Voverg</a></p>
   </footer>
-
-
-
-<!--   <footer>
-    <p>Created by <a href="https://github.com/voverg" rel="noopener noreferrer" target="_blank">Voverg</a></p>
-  </footer> -->
 
 
   <script src="js/main.js"></script>
