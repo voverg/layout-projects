@@ -128,6 +128,10 @@ a {
   opacity: 1;
 }
 
+path.current-floor {
+  opacity: 1;
+}
+
 /* Main info */
 .main__info {
   flex-grow: 1;
@@ -175,14 +179,14 @@ a {
   font-size: 7.75rem;
 }
 
-.btn-primary {
+.btn-view-flats {
   background-color: var(--white);
   border-radius: 6px;
   color: var(--blue);
   border: 1px solid var(--blue);
   padding: 16px 36px;
 }
-.btn-primary:hover {
+.btn-view-flats:hover {
   background-color: var(--blue);
   color: var(--white);
 }
@@ -262,6 +266,10 @@ a {
 
 /*------------- Responsive -----------------*/
 @media (max-width: 720px) {
+  .container {
+    padding: 10px;
+  }
+
   .navbar {
     flex-wrap: wrap;
   }
@@ -271,14 +279,9 @@ a {
     order: 1;
   }
 
-  .container {
-    padding: 10px;
-  }
-
   .main {
     flex-direction: column;
   }
-
   .main__img {
     max-width: 100%;
   }
@@ -288,13 +291,13 @@ a {
   }
 
   .counter {
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
   .counter__arrow--up {
-    transform: rotateZ(-90deg);
+    transform: rotateZ(90deg);
   }
   .counter__arrow--down {
-    transform: rotateZ(90deg);
+    transform: rotateZ(-90deg);
   }
   .counter__value {
     font-size: 3.75rem;
