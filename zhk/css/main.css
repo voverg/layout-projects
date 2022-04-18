@@ -170,7 +170,7 @@ path.current-floor {
   background-color: var(--white);
   border: none;
 }
-.counter__arrow--down {
+.counter__arrow--prev {
   transform: rotateX(180deg);
 }
 .counter__value {
@@ -293,15 +293,19 @@ path.current-floor {
   .counter {
     flex-direction: row-reverse;
   }
-  .counter__arrow--up {
+  .counter__arrow--next {
     transform: rotateZ(90deg);
   }
-  .counter__arrow--down {
+  .counter__arrow--prev {
     transform: rotateZ(-90deg);
   }
   .counter__value {
     font-size: 3.75rem;
     margin: 0 3rem;
+  }
+
+  .btn-view-flats {
+    margin-bottom: 30px;
   }
 
   .footer__block {

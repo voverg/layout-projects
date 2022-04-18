@@ -1,4 +1,4 @@
-const floors = [
+const floorList = [
   {floor: '02', coord: 'M222 532L442.8 540L512 526.3V548L443.5 567.7L222 556.7V532Z', active: true},
   {floor: '03', coord: 'M223 531V506L443.3 509.3L513 506V526L443.7 539L223 531Z', active: false},
   {floor: '04', coord: 'M223 505V480H444H513V503L445 510L223 505Z', active: false},
