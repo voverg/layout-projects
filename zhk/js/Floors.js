@@ -22,10 +22,7 @@ class Floors extends Component {
   onMouseover({target}) {
     if (!isFloor(target)) return;
 
-    clearCurrentFloor(this.$root);
-    target.classList.add('current-floor');
     const active = this.floorData.setActive(target.dataset.floor);
-
     this.store.dispatch({type: 'selectFloor', floor: active.id});
   }
 

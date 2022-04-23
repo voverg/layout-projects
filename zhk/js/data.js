@@ -18,7 +18,18 @@ const floorList = [
   {id: '18', coord: 'M222 157V131L444 74.3L513 176V197L443.7 105.3L222 157Z', active: false},
 ];
 
-const flatList = [];
+const flatList = [
+  {id: '0', amountRoom: 2, square: 64.5, active: true},
+  {id: '1', amountRoom: 1, square: 38.9, active: false},
+  {id: '2', amountRoom: 1, square: 35.9, active: false},
+  {id: '3', amountRoom: 2, square: 56.0, active: false},
+  {id: '4', amountRoom: 1, square: 35.8, active: false},
+  {id: '5', amountRoom: 1, square: 35.8, active: false},
+  {id: '6', amountRoom: 2, square: 58.4, active: false},
+  {id: '7', amountRoom: 1, square: 32.3, active: false},
+  {id: '8', amountRoom: 1, square: 29.9, active: false},
+  {id: '9', amountRoom: 3, square: 75.2, active: false},
+];
 
 
 class ListHandler {
@@ -67,5 +78,9 @@ class ListHandler {
     this.clearActive()
     this.list[index].active = true;
     this.active = this.list[index];
+  }
+
+  map(fn) {
+    return this.list.map(fn);
   }
 }

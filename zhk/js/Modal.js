@@ -1,14 +1,13 @@
 class Modal extends Component {
-  constructor($root, options) {
+  constructor($root, options = {}) {
     super($root, {
       name: 'Modal',
-      listeners: ['mouseover', 'click'],
+      listeners: ['click'],
       ...options,
     });
 
-    this.flatData = options.flatData;
     this.floorData = options.floorData;
-
+    this.flatData = options.flatData;
     this.$modalCounter = $root.querySelector('.modal-counter');
   }
 
@@ -26,27 +25,18 @@ class Modal extends Component {
 
   open() {
     this.$root.classList.add('is-open');
-    this.$modalCounter.textContent = this.floorData.getActive().id;
   }
 
   close() {
     this.$root.classList.remove('is-open');
   }
 
-  onMouseover({target}) {
-    // if (!isFloor(target)) return;
-
-    // clearCurrentFloor(this.$root);
-    // target.classList.add('current-floor');
-    // const active = this.floorData.setActive(target.dataset.floor);
-
-    // this.store.dispatch({type: 'select', floor: active.id});
-  }
-
   onClick({target}) {
     if (isClose(target)) {
       this.store.dispatch({type: 'open', open: false});
     }
+
+    // console.log('Modal');
   }
 
   render() {
