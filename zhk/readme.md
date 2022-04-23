@@ -1,28 +1,7 @@
-# <a name='nav'>App name</a>
+# <a name='nav'>Жилищный комплекс</a>
 
-Это простое приложение, написанное на HTML, CSS и чистом JavaScript. Вы можете посмотреть демо-версию приложения на [GitHub Pages по этой ссылке](https://link 'Посмотреть демо-версию')
-
-- [Описание](#description)
-- [Description(eng)](#description_eng)
+Вёрстка сайта жилищного комплекса с возможностью выбрать этаж и посмотреть квартиры на нём. Написан на HTML, CSS и чистом JavaScript. Вы можете посмотреть демо-версию сайта на [GitHub Pages по этой ссылке](https://github.com/voverg/layout-projects/tree/main/zhk 'Посмотреть демо-версию')
 
 ---
 
-![image](../main/img/habits.png)
-
-## <a name='description'>Описание</a>
-Приложение "Название":
-- 
-- 
-- 
-
-[Назад к заглавию](#nav)
-
-## <a name='description_eng'>App description</a>
-This is a simple application written by html, css and clean javascript. You can see this app demo version on [GitHub Pages this link](https://link 'Look at demo')
-
-Habits tracker app:
-- 
-- 
-- 
-
-[Back to menu](#nav)
+![image](../main/img/zhk.png)
