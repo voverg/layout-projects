@@ -1,6 +1,6 @@
 const titles = [
   'simple-store@Simple store',
-  'zhk@Жилищьный комплекс',
+  'zhk@Жилищный комплекс',
 ];
 
 function getData(list) {

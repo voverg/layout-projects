@@ -43,7 +43,7 @@
 
   <main class="main container">
     <div class="main__img">
-      <svg class="home-img floors" width="734" height="640" viewBox="0 0 734 640" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg class="home-img js-floors" width="734" height="640" viewBox="0 0 734 640" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect width="734" height="640" fill="url(#pattern0)"/>
 
         <defs>
@@ -57,13 +57,13 @@
 
     <div class="main__info">
       <h2 class="main__title">Выберите желаемый этаж</h2>
-      <div class="counter">
+      <div class="counter js-counter">
         <button class="btn counter__btn counter__btn--next">
-          <img class="counter__arrow counter__arrow--next" src="img/arrow.svg" alt="arrow next">
+          <img class="counter__arrow counter__arrow--next" src="img/arrow.svg" alt="arrow next" data-type="next">
         </button>
-        <span class="counter__value">02</span>
+        <span class="counter__value js-counter-value">02</span>
         <button class="btn counter__btn counter__btn--prev">
-          <img class="counter__arrow counter__arrow--prev" src="img/arrow.svg" alt="arrow prev">
+          <img class="counter__arrow counter__arrow--prev" src="img/arrow.svg" alt="arrow prev" data-type="prev">
         </button>
       </div>
       <div class="btn btn-view-flats">Смотреть квартиры на этаже</div>
@@ -101,12 +101,74 @@
     <p class="author container">Created by <a href="https://github.com/voverg" class="author__link" rel="noopener noreferrer" target="_blank">Voverg</a></p>
   </footer>
 
+  <div class="modal js-modal">
+    <div class="modal-dialog">
+      <button class="modal-close-button" data-close="true">&times;</button>
+      <div class="modal-image">
+        <h3 class="modal-title">Этаж <span class="modal-counter">02</span></h3>
+        <svg class="flats" width="433" height="408" viewBox="0 0 433 408" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <image id="image0" width="433" height="408" xlink:href="img/Floor.png"></image>
+          <path data-flats="49" d="M388 81V141H314V148H267.5V131H247V32.5H338.5V16H405V81H388Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="48" d="M314 148.5H268V200H367.5V205H387.5V141H314V148.5Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="47" d="M314.192 252.662H268V200H367.916V204.602H388V268H314.192V252.662Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="46" d="M314 253H268.5V309H295.5V376H340V393H405V328.5H388V268.5H314V253Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="45" d="M218 394.5V264H247.5V273.5H267.5V310.5H294.5V375H259.5V394.5H218Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="44" d="M217 394.5V264H187.5V273.5H167.5V310.5H140.5V375H175.5V394.5H217Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="43" d="M121 252H166.5V309H139.5V376H95V393H30V328.5H47V273.5H121V252Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="42" d="M119.5 273.5H46V198H167V250.822H119.5V273.5Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="41" d="M124.729 116H46V198H167V145.178H124.729V116Z" fill="#3595F6" fill-opacity="0.75"/>
+          <path data-flats="40" d="M46.5 81V115.5H125V144.5H164V131H184.5V32.5H93V16H28V81H46.5Z" fill="#656565BF" fill-opacity="0.75"/>
+        </svg>
+      </div>
+      <div class="modal-info">
+        <h3 class="modal-title">Выберите квартиру</h3>
+        <ul class="flat-list">
+          <li class="flat-item">
+            <a href="#" num= "40" class="flat-link">кв. <span class="flat-number-1">40</span>, 2 комн. 64,5 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "41" class="flat-link">кв. <span class="flat-number-2">41</span>, 1 комн. 38,9 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "42" class="flat-link">кв. <span class="flat-number-3">42</span>, 1 комн. 35,9 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "43" class="flat-link">кв. <span class="flat-number-4">43</span>, 2 комн. 56,0 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "44" class="flat-link">кв. <span class="flat-number-5">44</span>, 1 комн. 35,8 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "45" class="flat-link">кв. <span class="flat-number-6">45</span>, 1 комн. 35,8 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "46" class="flat-link">кв. <span class="flat-number-7">46</span>, 2 комн. 58,4 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "47" class="flat-link">кв. <span class="flat-number-8">47</span>, 1 комн. 32,3 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "48" class="flat-link">кв. <span class="flat-number-9">48</span>, 1 комн. 29,9 кв. м.</a>
+          </li>
+          <li class="flat-item">
+            <a href="#" num= "49" class="flat-link">кв. <span class="flat-number-10">49</span>, 3 комн. 75,2 кв. м.</a>
+          </li>
+        </ul>
+        <div class="button button buy-flat">Забронировать квартиру</div>
+        <p class="modal-alert">* Квартиры, отмеченные серым,<br> уже выкуплены</p>
+      </div>
+    </div>
+  </div>
+  <!-- /.modal -->
+
 
   <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
   <script src="js/DomListener.js"></script>
   <script src="js/Component.js"></script>
   <script src="js/Floors.js"></script>
   <script src="js/Counter.js"></script>
+  <script src="js/Modal.js"></script>
   <script src="js/App.js"></script>
   <script src="js/index.js"></script>
 </body>

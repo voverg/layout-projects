@@ -1,7 +1,7 @@
 class DomListener {
   constructor($root, listeners) {
     if (!$root) {
-      throw new Error('No $root for DomListener')
+      throw new Error(`No $root for DomListener`);
     }
     this.$root = $root;
     this.listeners = listeners;
@@ -27,7 +27,6 @@ class DomListener {
   }
 
 }
-
 
 
 function getCallbackName(eventName) {
