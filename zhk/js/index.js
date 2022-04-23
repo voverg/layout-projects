@@ -7,6 +7,7 @@ const app = new App({
     {class: Modal, elem: document.querySelector('.js-modal')},
     {class: Flats, elem: document.querySelector('.js-flats')},
     {class: FlatsInfo, elem: document.querySelector('.js-flat-list')},
+    {class: ShowBtn, elem: document.querySelector('.btn-view-flats')},
   ],
 });
 

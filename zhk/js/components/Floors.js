@@ -11,6 +11,7 @@ class Floors extends Component {
 
   init() {
     super.init();
+
     this.store.subscribe(() => {
       this.state = this.store.getState();
       clearCurrentFloor(this.$root);

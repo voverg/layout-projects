@@ -9,8 +9,6 @@ class Flats extends Modal{
     this.modalCounter = this.$root.querySelector('.modal-counter');
     this.flats = this.$root.querySelectorAll('[data-flats]');
     this.currentFlat = this.flats[0];
-
-    // console.log(this.currentFlat);
   }
 
   init() {
@@ -18,6 +16,7 @@ class Flats extends Modal{
 
     this.store.subscribe(() => {
       this.state = this.store.getState();
+
       if (this.state.open) {
         this.render();
         this.clear();
