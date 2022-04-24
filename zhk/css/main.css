@@ -446,6 +446,12 @@ path.current-flat {
   .flat-list {
     margin: 0;
   }
+  .modal-close-button {
+    top: -10px;
+    right: 10px;
+    background-color: transparent;
+    z-index: 100;
+  }
 
   .footer__block {
     flex-direction: column;
