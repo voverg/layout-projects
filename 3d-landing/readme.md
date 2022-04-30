@@ -1,28 +1,15 @@
-# <a name='nav'>App name</a>
+# <a name='nav'>3D Landing</a>
 
-Это вёрстка учебного сайта. Вы можете посмотреть демо-версию сайта на [GitHub Pages по этой ссылке](https://https://voverg.github.io/layout-projects/here 'Посмотреть демо-версию')
+Лендинг с красивым 3D-эффектом при скролле. Вы можете посмотреть демо-версию сайта на [GitHub Pages по этой ссылке](https://voverg.github.io/layout-projects/3d-landing 'Посмотреть демо-версию')
 
 - [Описание](#description)
-- [Description(eng)](#description_eng)
 
 ---
 
-![image](../main/img/name.png)
+![image](../main/img/3d-landing.png)
 
 ## <a name='description'>Описание</a>
-Приложение "Название":
--
--
--
+Приложение "3D Landing":
+- В качестве фреймов в лендинг можно размещать фото, видео, ссылки и другую информацию. Также подойдёт для создания красивой презентации с 3D-эффектом.
 
 [Назад к заглавию](#nav)
-
-## <a name='description_eng'>App description</a>
-This is a simple application written by html, css and clean javascript. You can see this app demo version on [GitHub Pages this link](https://https://voverg.github.io/layout-projects/here 'Look at demo')
-
-Habits tracker app:
--
--
--
-
-[Back to menu](#nav)

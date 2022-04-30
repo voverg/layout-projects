@@ -1,15 +1,15 @@
-# <a name='nav'>Жилой комплекс "Владимир"</a>
+# <a name='nav'>Layout projects</a>
 
-Это вёрстка учебного сайта жилого комплекса. Вы можете посмотреть демо-версию сайта на [GitHub Pages по этой ссылке](https://https://voverg.github.io/layout-projects/zhk 'Посмотреть демо-версию')
+Это коллекция моих проектов по вёрстке. Вы можете посмотреть демо-версию сайта на [GitHub Pages по этой ссылке](https://voverg.github.io/layout-projects/ 'Посмотреть демо-версию')
 
 - [Описание](#description)
 
+
 ---
 
-![image](../main/img/zhk.png)
+![image](main/img/layout-projects.png)
 
 ## <a name='description'>Описание</a>
-На сайте жилого комлекса вы можете:
 -
 -
 -
