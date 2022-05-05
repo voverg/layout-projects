@@ -16,48 +16,86 @@
   <main class="container">
     <section class="gallery">
 
-      <div class="frame">
+      <div class="frame frame--bg">
         <div class="frame__content">
           <h2 class="frame__title">Beautiful world</h2>
         </div>
       </div>
 
-      <div class="frame">
+      <div class="frame frame--bg">
         <div class="frame__content">
           <div class="frame__media frame__media--left" style="background-image: url(img/1.jpg)"></div>
         </div>
       </div>
 
       <div class="frame frame--bg">
-        <div class="frame__content">
-          <div class="frame__media frame__media--right" style="background-image: url(img/2.jpg)"></div>
+        <div class="frame__content frame__description frame__media--right">
+          <h3 class="frame__header">Nice nature</h3>
+          <p class="frame__text">Lorem, ipsum dolor sit amet, conse ctetur adipis icing elit. Numquam inci dunt, porro iure deserunt. Quis quam perfer endis cupiditate</p>
         </div>
       </div>
 
       <div class="frame">
         <div class="frame__content">
-          <div class="frame__media" style="background-image: url(img/3.jpg)"></div>
+          <div class="frame__media frame__media--left frame__media--large" style="background-image: url(img/4.jpg)"></div>
         </div>
       </div>
 
+      <div class="frame"></div>
+
       <div class="frame">
-        <div class="frame__content">
-          <div class="frame__media frame__media--left" style="background-image: url(img/4.jpg)"></div>
+        <div class="frame__content frame__description frame__media--left">
+          <h3 class="frame__header">Calm water</h3>
+          <p class="frame__text">Lorem, ipsum dolor sit amet, consec tetur adipis icing elit. Numquam incidunt, porro iure deserunt. Quisquam perfer endis cupid itate</p>
         </div>
       </div>
 
+      <div class="frame frame--bg">
+        <div class="frame__content">
+          <div class="frame__media frame__media--right" style="background-image: url(img/3.jpg)"></div>
+        </div>
+      </div>
+
+      <div class="frame"></div>
+
+      <div class="frame">
+        <div class="frame__content frame__description frame__media--right">
+          <h3 class="frame__header">Big mountain</h3>
+          <p class="frame__text">Lorem, ipsum dolor sit amet, conse ctetur adipis icing elit. Numquam inci dunt, porro iure deserunt. Quis quam perfer endis cupiditate</p>
+        </div>
+      </div>
+
+      <div class="frame frame--bg">
+        <div class="frame__content">
+          <div class="frame__media frame__media--left" style="background-image: url(img/2.jpg)"></div>
+        </div>
+      </div>
+
+      <div class="frame frame--bg">
+        <div class="frame__content">
+          <h2 class="frame__title">Wake up ocean</h2>
+        </div>
+      </div>
+
+      <div class="frame"></div>
+
       <div class="frame">
         <div class="frame__content">
-          <div class="frame__media frame__media--right" style="background-image: url(img/5.jpg)"></div>
+          <div class="frame__media" style="background-image: url(img/5.jpg)"></div>
         </div>
       </div>
 
     </section>
   </main>
 
-<!--   <footer>
-    <p>Created by <a href="https://github.com/voverg" rel="noopener noreferrer" target="_blank">Voverg</a></p>
-  </footer> -->
+  <footer class="footer">
+    <p class="footer__content">Created by
+      <a href="https://github.com/voverg" class="footer__link" rel="noopener noreferrer" target="_blank">Voverg</a>
+      <img src="img/sound.gif" alt="sound button" class="sound-btn paused">
+    </p>
+  </footer>
+
+  <audio src="media/ambient.mp3" class="audio" loop></audio>
 
 
   <script src="js/index.js"></script>
