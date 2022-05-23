@@ -327,6 +327,9 @@
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 200;
 }
+.cart--active {
+  display: block;
+}
 .cart__body {
   position: absolute;
   top: 50%;
@@ -345,10 +348,13 @@
   font-size: 28px;
   color: rgba(0, 0, 0, 0.4);
 }
-.cart__wrapper {
+.cart__goods {
   display: flex;
   flex-wrap: wrap;
   margin-top: 25px;
+}
+.cart__goods .card {
+  width: 33.33%;
 }
 .cart__empty {
   flex-grow: 1;
@@ -361,6 +367,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .cart__total {
@@ -449,6 +456,10 @@ footer a:hover {
     order: 3;
   }
 
+  .main {
+    padding-top: 100px;
+  }
+
   .filter__wrapper {
     visibility: hidden;
     position: fixed;
@@ -479,7 +490,7 @@ footer a:hover {
   .filter__close {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     font-size: 2rem;
     color: var(--red);
@@ -489,7 +500,8 @@ footer a:hover {
   .goods {
     padding-left: 0;
   }
-  .card {
+  .card,
+  .cart__goods .card {
     width: 100%;
   }
 }

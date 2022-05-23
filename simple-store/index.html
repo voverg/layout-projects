@@ -95,7 +95,7 @@
 
     <div class="goods">
 
-      <div class="card">
+      <!-- <div class="card">
         <img class="card__img" src="img/1.jpg" alt="phone">
         <div class="card__colors">Доступно цветов: 4</div>
         <div class="card__price">
@@ -107,63 +107,7 @@
         </div>
         
         <button class="card__btn">В корзину</button>
-      </div>
-
-      <div class="card">
-        <img class="card__img" src="img/1.jpg" alt="phone">
-        <div class="card__colors">Доступно цветов: 4</div>
-        <div class="card__price">
-          <span class="card__price-value">5768</span> ₽
-        </div>
-        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
-        <div class="card__title">
-          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей. Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
-        </div>
-        
-        <button class="card__btn">В корзину</button>
-      </div>
-
-      <div class="card">
-        <img class="card__img" src="img/1.jpg" alt="phone">
-        <div class="card__colors">Доступно цветов: 4</div>
-        <div class="card__price">
-          <span class="card__price-value">5768</span> ₽
-        </div>
-        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
-        <div class="card__title">
-          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
-        </div>
-        
-        <button class="card__btn">В корзину</button>
-      </div>
-
-      <div class="card">
-        <img class="card__img" src="img/1.jpg" alt="phone">
-        <div class="card__colors">Доступно цветов: 4</div>
-        <div class="card__price">
-          <span class="card__price-value">5768</span> ₽
-        </div>
-        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
-        <div class="card__title">
-          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
-        </div>
-        
-        <button class="card__btn">В корзину</button>
-      </div>
-
-      <div class="card">
-        <img class="card__img" src="img/1.jpg" alt="phone">
-        <div class="card__colors">Доступно цветов: 4</div>
-        <div class="card__price">
-          <span class="card__price-value">5768</span> ₽
-        </div>
-        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
-        <div class="card__title">
-          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
-        </div>
-        
-        <button class="card__btn">В корзину</button>
-      </div>
+      </div> -->
 
     </div>
   </main>
@@ -172,18 +116,17 @@
   <!-- Modal widow with the cart -->
   <div class="cart">
     <div class="cart__body">
-      <div class="cart__title">Корзина</div>
-      <div class="cart__total">Общая сумма: <span>0</span> руб.</div>
+
+      <div class="cart__header">
+        <div class="cart__title">Корзина</div>
+        <div class="cart__total">Общая сумма: <span class="cart__total-value">0</span> руб.</div>
+      </div>
       <hr>
-      <div class="cart__wrapper">
-        <div class="cart__empty">
-          Ваша корзина пока пуста
-        </div>
-      </div>
+
+      <div class="cart__goods"></div>
+
       <button class="cart__confirm">Оформить заказ</button>
-      <div class="cart__close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </div>
+      <div class="cart__close">&#10006;</div>
     </div>
   </div>
 
@@ -194,6 +137,8 @@
   <script src="js/data.js"></script>
   <script src="js/burger.js"></script>
   <script src="js/catalog.js"></script>
+  <script src="js/goods.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
