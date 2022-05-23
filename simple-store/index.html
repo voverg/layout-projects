@@ -4,79 +4,170 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Страничка выбора товара интернет магазина с реализацией функции корзины.">
-  <meta name="keywords" content="Some keywords">
+  <meta name="description" content="Реализация клиентской части интернет магазина на чистом JavaScript">
+  <meta name="keywords" content="html, css, javascript">
   <meta name="og:image" content="logo/logo.png">
   <title>Simple Store</title>
-  <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="icons/cart.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="logo row-item">
-          <img src="logo/logo.png" alt="logo">
-        </div>
-        <div class="row-item">
-          <form class="search" action="#">
-            <input type="text" placeholder="Я ищу..." class="search__input">
-            <button>
-              <img src="icons/glass.svg" alt="search">
-            </button>
-          </form>
-        </div>
-        <div class="row-item">
-          <div class="nav">
-            <div class="nav__item">
-              <img src="icons/like.svg" alt="like">
-            </div>
-            <div class="nav__title">Избранное</div>
-          </div>
-        </div>
-        <div class="">
-          <div class="nav" id="cart">
-            <div class="nav__item">
-              <img src="icons/cart.svg" alt="cart">
-              <div class="nav__badge">0</div>
-            </div>
-            <div class="nav__title">Корзина</div>
-          </div>
-        </div>
-      </div>
+  <header class="header container row">
+    <img src="icons/burger.svg" alt="" class="burger__btn">
+    <div class="logo">
+      <img src="icons/logo.svg" class="logo__img" alt="logo">
     </div>
+
+    <div class="catalog">
+      <button class="catalog__btn">
+        <img src="icons/catalog-icon.svg" alt="catalog icon" class="catalog__icon">
+        Каталог
+      </button>
+        <ul class="catalog__list">
+          <li class="catalog__item">Игровая приставка</li>
+          <li class="catalog__item">Периферия для ПК</li>
+          <li class="catalog__item">Игры и софт</li>
+          <li class="catalog__item">Телефоны</li>
+        </ul>
+    </div>
+
+    <form class="search">
+      <input type="text" placeholder="Поиск..." class="search__input">
+      <button>
+        <img src="icons/glass.svg" alt="search">
+      </button>
+    </form>
+
+    <div class="order" id="order">
+      <div class="order__item">
+        <img src="icons/cart.svg" class="order__icon" alt="cart">
+        <div class="order__badge">0</div>
+      </div>
+      <div class="order__title">Корзина</div>
+    </div>
+
   </header>
 
   <hr>
 
-  <div class="container">
-    <div class="breadcrumbs">
-      <a href="#">Главная</a>
-      /
-      <a href="#">Мобильные телефоны</a>
-    </div>
-  </div>
+  <main class="main container">
 
-  <div class="goods">
-    <div class="container">
-      <div class="goods__wrapper">
+    <aside class="filter__wrapper">
+      <div class="filter filter--active">
+        <div class="filter__close">&#10006;</div>
+        <h3 class="filter__title">Фильтр</h3>
 
-<!--         <div class="goods__item">
-          <div class="card">
-            <img class="card__img goods__img" src="img/1.jpg" alt="phone">
-            <div class="card__colors goods__colors">Доступно цветов: 4</div>
-            <div class="card__title goods__title">
-              Смартфон Xiaomi Redmi 6A 16 ГБ. Лучший подарок для молодёжи и родителей. Основная камера 13 Мп, полноэкранный дисплей.
-            </div>
-            <div class="card__price goods__price">
-              <span>5768</span> руб/шт
-            </div>
-            <button class="card__btn goods__btn">Добавить в корзину</button>
-          </div>
-        </div> -->
+        <div class="filter__price">
+          <h4 class="filter__price-title">Цена</h4>
+          <input type="range" class="filter__price-slider" min="0" max="50000" value="0">
+          <form class="filter__price-range">
+            <label for="">от
+              <input type="number" min="0" class="filter__price-input" placeholder="0">
+            </label>
+            <label for="">до
+              <input type="number" min="0" class="filter__price-input" placeholder="0">
+            </label>
+          </form>
+        </div>
 
+        <div class="brand">
+          <h4 class="brand__title">Бренды</h4>
+          <ul class="brand__list">
+
+            <li class="brand__item">
+              <label class="brand__item-label">
+                <input type="checkbox" class="brand__item-input">Sony
+              </label>
+            </li>
+
+            <li class="brand__item">
+              <label class="brand__item-label">
+                <input type="checkbox" class="brand__item-input">Xiaomi
+              </label>
+            </li>
+
+          </ul>
+        </div>
+        
       </div>
+    </aside>
+
+
+    <div class="goods">
+
+      <div class="card">
+        <img class="card__img" src="img/1.jpg" alt="phone">
+        <div class="card__colors">Доступно цветов: 4</div>
+        <div class="card__price">
+          <span class="card__price-value">5768</span> ₽
+        </div>
+        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
+        <div class="card__title">
+          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
+        </div>
+        
+        <button class="card__btn">В корзину</button>
+      </div>
+
+      <div class="card">
+        <img class="card__img" src="img/1.jpg" alt="phone">
+        <div class="card__colors">Доступно цветов: 4</div>
+        <div class="card__price">
+          <span class="card__price-value">5768</span> ₽
+        </div>
+        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
+        <div class="card__title">
+          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей. Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
+        </div>
+        
+        <button class="card__btn">В корзину</button>
+      </div>
+
+      <div class="card">
+        <img class="card__img" src="img/1.jpg" alt="phone">
+        <div class="card__colors">Доступно цветов: 4</div>
+        <div class="card__price">
+          <span class="card__price-value">5768</span> ₽
+        </div>
+        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
+        <div class="card__title">
+          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
+        </div>
+        
+        <button class="card__btn">В корзину</button>
+      </div>
+
+      <div class="card">
+        <img class="card__img" src="img/1.jpg" alt="phone">
+        <div class="card__colors">Доступно цветов: 4</div>
+        <div class="card__price">
+          <span class="card__price-value">5768</span> ₽
+        </div>
+        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
+        <div class="card__title">
+          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
+        </div>
+        
+        <button class="card__btn">В корзину</button>
+      </div>
+
+      <div class="card">
+        <img class="card__img" src="img/1.jpg" alt="phone">
+        <div class="card__colors">Доступно цветов: 4</div>
+        <div class="card__price">
+          <span class="card__price-value">5768</span> ₽
+        </div>
+        <div class="card__category"><strong>Категория: </strong>Телефоны</div>
+        <div class="card__title">
+          Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.
+        </div>
+        
+        <button class="card__btn">В корзину</button>
+      </div>
+
     </div>
+  </main>
+
 
   <!-- Modal widow with the cart -->
   <div class="cart">
@@ -85,7 +176,7 @@
       <div class="cart__total">Общая сумма: <span>0</span> руб.</div>
       <hr>
       <div class="cart__wrapper">
-        <div class="empty">
+        <div class="cart__empty">
           Ваша корзина пока пуста
         </div>
       </div>
@@ -96,12 +187,13 @@
     </div>
   </div>
 
-  <div class="confirm">
-    <img src="icons/confirm.svg" alt="confirm">
-  </div>
+  <footer class="footer">
+    <p>Created by <a href="https://github.com/voverg" rel="noopener noreferrer" target="_blank">Voverg</a></p>
+  </footer>
 
   <script src="js/data.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
