@@ -1,6 +1,7 @@
 class Goods {
   constructor(arr) {
     this.arr = arr;
+    this.filteredArr = arr;
     this.$goods = document.querySelector('.goods');
 
     this.init();
@@ -19,8 +20,18 @@ class Goods {
     }
   }
 
+  setCategory(category) {
+    this.filteredArr = this.arr.filter(item => item.category === category);
+    this.render();
+  }
+
+  setPriceFilter(min, max) {
+    console.log('min is: ', min);
+    console.log('max is: ', max);
+  }
+
   render() {
-    const list = this.arr.map(item => {
+    const list = this.filteredArr.map(item => {
       return this.createElem(item);
     });
 
@@ -42,4 +53,5 @@ class Goods {
       </div>
     `;
   }
+
 }

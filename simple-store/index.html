@@ -62,10 +62,10 @@
           <input type="range" class="filter__price-slider" min="0" max="50000" value="0">
           <form class="filter__price-range">
             <label for="">от
-              <input type="number" min="0" class="filter__price-input" placeholder="0">
+              <input type="number" min="0" max="100000" class="filter__price-input" id="min-price" placeholder="0">
             </label>
             <label for="">до
-              <input type="number" min="0" class="filter__price-input" placeholder="0">
+              <input type="number" min="0" max="100000" class="filter__price-input" id="max-price" placeholder="0">
             </label>
           </form>
         </div>
@@ -73,19 +73,11 @@
         <div class="brand">
           <h4 class="brand__title">Бренды</h4>
           <ul class="brand__list">
-
-            <li class="brand__item">
+<!--             <li class="brand__item">
               <label class="brand__item-label">
                 <input type="checkbox" class="brand__item-input">Sony
               </label>
-            </li>
-
-            <li class="brand__item">
-              <label class="brand__item-label">
-                <input type="checkbox" class="brand__item-input">Xiaomi
-              </label>
-            </li>
-
+            </li> -->
           </ul>
         </div>
         
@@ -139,6 +131,7 @@
   <script src="js/catalog.js"></script>
   <script src="js/goods.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/filter.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
