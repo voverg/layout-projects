@@ -13,8 +13,7 @@ class Goods {
 
     this.store.subscribe(() => {
       this.state = this.store.getState();
-      // this.setCategory(this.state.category);
-      this.search(this.state.search);
+      this.filter();
     });
   }
 
@@ -27,34 +26,68 @@ class Goods {
     }
   }
 
-  setCategory(category = 'Все категории') {
-    if (category === 'Все категории') {
-      const categoryArr = this.arr;
-    } else {
-      const categoryArr = this.arr.filter(item => item.category === category);
-    }
-    this.render(categoryArr);
-  }
+  filter() {
+    const categoryArr = this.setCategory(this.state.category, this.arr);
+    const brandArr = this.setBrands(this.state.brands, categoryArr);
+    const priceFilterArr = this.setPriceFilter(this.state.minPrice, this.state.maxPrice, brandArr);
+    const searchArr = this.search(this.state.search, priceFilterArr);
 
-  setPriceFilter(min, max) {
-    console.log('min is: ', min);
-    console.log('max is: ', max);
-  }
-
-  search(text) {
-    const searchArr = this.arr.filter(item => {
-      const title = item.title.toLowerCase();
-      return title.includes(text.toLowerCase().trim())
-    });
     this.render(searchArr);
   }
 
+  setCategory(category = 'Все категории', arr) {
+    let categoryArr = [];
+
+    if (category === 'Все категории') {
+      categoryArr = arr;
+    } else {
+      categoryArr = arr.filter(item => item.category === category);
+    }
+
+    return categoryArr;
+  }
+
+  setBrands(brands, arr) {
+    let brandFilterArr = arr;
+
+    if (brands.length) {
+      brandFilterArr = arr.filter(item => {
+        return brands.includes(item.brand);
+      });
+    }
+    
+    return brandFilterArr;
+  }
+
+  setPriceFilter(min, max, arr) {
+    let priceFilterArr = arr.filter(item => {
+      const price = +item.price.replace(' ', '');
+      return price >= min && price <= max;
+    });
+
+    if (max === 0) {
+      priceFilterArr = arr;
+    }
+    
+    return priceFilterArr;
+  }
+
+  search(text, arr) {
+    const searchArr = arr.filter(item => {
+      const title = item.title.toLowerCase();
+      return title.includes(text.toLowerCase().trim())
+    });
+
+    return searchArr;
+  }
+
   render(arr) {
+    const noRusultsBlock = '<div class="goods__no-results">Не найдено ни одного товара...</div>';
     const list = arr.map(item => {
       return this.createElem(item);
     });
 
-    this.$goods.innerHTML = list.join(' ');
+    this.$goods.innerHTML = list.join(' ') ? list.join(' ') : noRusultsBlock;
   }
 
   createElem(elem) {

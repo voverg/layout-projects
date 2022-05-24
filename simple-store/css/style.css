@@ -181,6 +181,7 @@
   display: flex;
   position: relative;
   padding-top: 90px;
+  min-height: 90vh;
 }
 
 .filter {
@@ -239,6 +240,10 @@
   display: flex;
   flex-wrap: wrap;
   padding-left: calc(var(--filter-width) + 20px);
+}
+
+.goods__no-results {
+  margin: 30% auto;
 }
 
 /*Card*/
@@ -505,6 +510,9 @@ footer a:hover {
     font-size: 2rem;
     color: var(--red);
     cursor: pointer;
+  }
+  .filter__price-slider {
+    margin: 20px 0;
   }
 
   .goods {

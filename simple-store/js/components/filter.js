@@ -1,6 +1,7 @@
 class Filter {
   constructor(options) {
     this.$filter = document.querySelector('.filter');
+    this.$priceSlider = this.$filter.querySelector('.filter__price-slider');
     this.$minPrice = this.$filter.querySelector('#min-price');
     this.$maxPrice = this.$filter.querySelector('#max-price');
     this.$brandList = this.$filter.querySelector('.brand__list');
@@ -15,9 +16,16 @@ class Filter {
   init() {
     this.render();
 
+    this.$priceSlider.addEventListener('input', this.sliderHandler.bind(this));
     this.$minPrice.addEventListener('input', this.setMinPrice.bind(this));
     this.$maxPrice.addEventListener('input', this.setMaxPrice.bind(this));
     this.$brandList.addEventListener('change', this.setBrands.bind(this));
+  }
+
+  sliderHandler({target}) {
+    this.$maxPrice.value = target.value;
+    this.maxPrice = +target.value;
+    this._setPrice();
   }
 
   setMinPrice({target}) {
@@ -31,13 +39,12 @@ class Filter {
   }
 
   _setPrice() {
-    if (this.maxPrice <= this.minPrice) {
-      this.maxPrice = this.minPrice;
-      this.$maxPrice.value = this.minPrice;
+    if (this.maxPrice < this.minPrice) {
+      this.$minPrice.value = this.maxPrice;
+      this.minPrice = this.maxPrice;
     }
 
-    this.store.dispatch({type: 'minPrice', minPrice: this.minPrice});
-    this.store.dispatch({type: 'maxPrice', maxPrice: this.maxPrice});
+    this.store.dispatch({type: 'price', payload: {minPrice: this.minPrice, maxPrice: this.maxPrice} });
   }
 
   setBrands({target}) {

@@ -22,11 +22,8 @@ function rootReducer(state, action) {
     case 'category':
       state = {...state, category: action.category};
       return state;
-    case 'minPrice':
-      state = {...state, minPrice: action.minPrice};
-      return state;
-    case 'maxPrice':
-      state = {...state, maxPrice: action.maxPrice};
+    case 'price':
+      state = {...state, ...action.payload };
       return state;
     case 'brands':
       state = { ...state, brands: [...action.brands] };
