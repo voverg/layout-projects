@@ -3,18 +3,18 @@ class Goods {
     this.$goods = document.querySelector('.goods');
 
     this.arr = goodsList;
-    this.filteredArr = this.arr;
     this.store = options.store;
     this.state = {};
   }
 
   init() {
-    this.render();
+    this.render(this.arr);
     this.$goods.addEventListener('click', this.goodsHandler.bind(this));
 
     this.store.subscribe(() => {
       this.state = this.store.getState();
-      this.setCategory(this.state.category);
+      // this.setCategory(this.state.category);
+      this.search(this.state.search);
     });
   }
 
@@ -22,18 +22,18 @@ class Goods {
     if (target.classList.contains('card__btn')) {
       const cardId = +target.closest('.card').dataset.id;
       const card = this.arr.find(item => item.id === cardId);
-      
+
       this.store.dispatch({type: 'addCard', card: card});
     }
   }
 
   setCategory(category = 'Все категории') {
     if (category === 'Все категории') {
-      this.filteredArr = this.arr;
+      const categoryArr = this.arr;
     } else {
-      this.filteredArr = this.arr.filter(item => item.category === category);
+      const categoryArr = this.arr.filter(item => item.category === category);
     }
-    this.render();
+    this.render(categoryArr);
   }
 
   setPriceFilter(min, max) {
@@ -41,8 +41,16 @@ class Goods {
     console.log('max is: ', max);
   }
 
-  render() {
-    const list = this.filteredArr.map(item => {
+  search(text) {
+    const searchArr = this.arr.filter(item => {
+      const title = item.title.toLowerCase();
+      return title.includes(text.toLowerCase().trim())
+    });
+    this.render(searchArr);
+  }
+
+  render(arr) {
+    const list = arr.map(item => {
       return this.createElem(item);
     });
 

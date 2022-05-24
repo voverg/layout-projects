@@ -25,7 +25,6 @@ class Catalog {
     if (target.classList.contains('catalog__item')) {
       const category = target.textContent;
       this.store.dispatch({type: 'category', category: category});
-      // goods.setCategory(category);
       this.hide();
       this.$catalogTitle.textContent = category;
     }
