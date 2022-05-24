@@ -5,7 +5,7 @@ class Filter {
     this.$maxPrice = this.$filter.querySelector('#max-price');
     this.$brandList = this.$filter.querySelector('.brand__list');
 
-    this.brands = ['sony', 'Xiaomi', 'Huawei', 'Honor', 'Logitech', 'Defender', 'Genius', 'Microsoft'];
+    this.brands = ['Sony', 'Xiaomi', 'Huawei', 'Honor', 'Logitech', 'Defender', 'Genius', 'Microsoft', 'Nintendo', 'Sega', 'Dendy', 'Trust', 'Orico', 'Abbyy'];
     this.minPrice = 0;
     this.maxPrice = 0;
     this.init();

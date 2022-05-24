@@ -14,6 +14,7 @@
   --red: #dc3e2a;
   --red-hover: #7d1919;
   --radius: 4px;
+  --filter-width: 250px;
   --transition: .2s;
 }
 
@@ -182,10 +183,25 @@
   padding-top: 90px;
 }
 
+.filter__wrapper {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 100;
+}
+.filter__wrapper--active {
+  visibility: visible;
+}
+
 .filter {
   position: fixed;
-  width: 200px;
+  width: var(--filter-width);
   padding: 20px 20px 0 0;
+  background-color: #fff;
   color: #555;
   z-index: 100;
 }
@@ -202,7 +218,7 @@
   cursor: pointer;
 }
 .filter__price-input {
-  width: 35%;
+  width: 38%;
   outline: none;
   padding: 3px;
 }
@@ -236,7 +252,7 @@
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 200px;
+  padding-left: var(--filter-width);
 }
 
 /*Card*/
@@ -273,7 +289,8 @@
 }
 .card__img {
   width: 95%;
-  object-fit: cover;
+  height: 230px;
+  /*object-fit: cover;*/
 }
 .card__colors {
   font-size: 12px;
@@ -460,28 +477,14 @@ footer a:hover {
     padding-top: 100px;
   }
 
-  .filter__wrapper {
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .8);
-    z-index: 100;
-  }
-  .filter__wrapper--active {
-    visibility: visible;
-  }
   .filter {
-    position: fixed;
     top: 0;
     left: 0;
     width: 80%;
     height: 100vh;
     padding: 20px;
-    background-color: #fff;
     transform: translateX(-100%);
+    overflow-y: auto;
     transition: .3s;
   }
   .filter--active {
@@ -510,4 +513,8 @@ footer a:hover {
   }
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  .search {
+    width: 50%;
+  }
+}

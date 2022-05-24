@@ -20,8 +20,12 @@ class Goods {
     }
   }
 
-  setCategory(category) {
-    this.filteredArr = this.arr.filter(item => item.category === category);
+  setCategory(category = 'Все категории') {
+    if (category === 'Все категории') {
+      this.filteredArr = this.arr;
+    } else {
+      this.filteredArr = this.arr.filter(item => item.category === category);
+    }
     this.render();
   }
 
