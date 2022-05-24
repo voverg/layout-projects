@@ -17,6 +17,7 @@ class Filter {
     this.render();
 
     this.$priceSlider.addEventListener('input', this.sliderHandler.bind(this));
+    this.$priceSlider.addEventListener('change', this.setMaxPrice.bind(this));
     this.$minPrice.addEventListener('input', this.setMinPrice.bind(this));
     this.$maxPrice.addEventListener('input', this.setMaxPrice.bind(this));
     this.$brandList.addEventListener('change', this.setBrands.bind(this));
@@ -25,7 +26,6 @@ class Filter {
   sliderHandler({target}) {
     this.$maxPrice.value = target.value;
     this.maxPrice = +target.value;
-    this._setPrice();
   }
 
   setMinPrice({target}) {
