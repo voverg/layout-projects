@@ -5,6 +5,7 @@ const goodsList = [
     colorAmount: '4',
     title: 'Смартфон Xiaomi Redmi 6A 16 ГБ. Основная камера 13 Мп, полноэкранный дисплей.',
     price: '5768',
+    brand: 'Xiaomi',
     category: 'Телефоны',
   },
   {
@@ -13,6 +14,7 @@ const goodsList = [
     colorAmount: '3',
     title: 'Смартфон Xiaomi Redmi 6A 32 ГБ. Основная камера 13 Мп, полноэкранный дисплей, современный дизайн.',
     price: '17 600',
+    brand: 'Xiaomi',
     category: 'Телефоны',
   },
   {
@@ -21,6 +23,7 @@ const goodsList = [
     colorAmount: '2',
     title: 'Смартфон HUAWEI Y6 Prime 2018.',
     price: '6 800',
+    brand: 'Huawei',
     category: 'Телефоны',
   },
   {
@@ -29,6 +32,7 @@ const goodsList = [
     colorAmount: '3',
     title: 'Cмартфон Honor 7С Pro 32 ГБ. Безрамочный экран 5, 99',
     price: '7 200',
+    brand: 'Honor',
     category: 'Телефоны',
   },
   {
@@ -37,6 +41,7 @@ const goodsList = [
     colorAmount: '2',
     title: 'Смартфон Xiaomi Redmi 5 16 ГБ с широким экраном.',
     price: '9 630',
+    brand: 'Xiaomi',
     category: 'Телефоны',
   },
   {
@@ -45,6 +50,7 @@ const goodsList = [
     colorAmount: '4',
     title: 'Cмартфон Honor 8X 64 ГБ. Безрамочный экран FullView 6,5“. Доставка из России от 2 дней.',
     price: '15 990',
+    brand: 'Honor',
     category: 'Телефоны',
   },
   {
@@ -53,6 +59,7 @@ const goodsList = [
     colorAmount: '5',
     title: 'Смартфон HUAWEI P20 lite',
     price: '13 990',
+    brand: 'Huawei',
     category: 'Телефоны',
   },
   {
@@ -61,6 +68,7 @@ const goodsList = [
     colorAmount: '3',
     title: 'Смартфон Xiaomi Mi8 Lite 4 + 64 ГБ',
     price: '17 990',
+    brand: 'Xiaomi',
     category: 'Телефоны',
   },
   {
@@ -70,7 +78,7 @@ const goodsList = [
     price: '33 990',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1033180284.jpg',
-    'hoverImg': 'https://cdn1.ozone.ru/multimedia/c400/1033180283.jpg',
+    brand: 'Sony',
     category: 'Игровая приставка'
   },
   {
@@ -79,6 +87,7 @@ const goodsList = [
     title: 'Игровая приставка Sony PlayStation 3 Super Slim',
     price: '16 499',
     link: 'https://cdn1.ozone.ru/multimedia/c400/1027495663.jpg',
+    brand: 'Sony',
     category: 'Игровая приставка'
   }, {
     id: 25,
@@ -87,6 +96,7 @@ const goodsList = [
     price: '39 990',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1024358491.jpg',
+    brand: 'Microsoft',
     category: 'Игровая приставка'
   }, {
     id: 26,
@@ -95,6 +105,7 @@ const goodsList = [
     price: '23 411',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1024822131.jpg',
+    brand: 'Microsoft',
     category: 'Игровая приставка'
   }, {
     id: 27,
@@ -103,6 +114,7 @@ const goodsList = [
     price: '24 751',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1021386685.jpg',
+    brand: 'Nintendo',
     category: 'Игровая приставка'
   }, {
     id: 28,
@@ -111,6 +123,7 @@ const goodsList = [
     price: '3 624',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1024928305.jpg',
+    brand: 'Sega',
     category: 'Игровая приставка'
   }, {
     id: 29,
@@ -119,6 +132,7 @@ const goodsList = [
     price: '1 551',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1021877092.jpg',
+    brand: 'Dendy',
     category: 'Игровая приставка'
   }, {
     id: 30,
@@ -127,6 +141,7 @@ const goodsList = [
     price: '10 445',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1025222877.jpg',
+    brand: 'Sony',
     category: 'Игровая приставка'
   }, {
     id: 31,
@@ -135,6 +150,7 @@ const goodsList = [
     price: '2 390',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1015518726.jpg',
+    brand: 'Logitech',
     category: 'Периферия для ПК'
   }, {
     id: 9,
@@ -143,6 +159,7 @@ const goodsList = [
     price: '566',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1028488609.jpg',
+    brand: 'Defender',
     category: 'Периферия для ПК'
   }, {
     id: 10,
@@ -150,7 +167,7 @@ const goodsList = [
     price: '12 848',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1027006299.jpg',
-    'hoverImg': 'https://cdn1.ozone.ru/multimedia/c400/1027006301.jpg',
+    brand: 'Steelseries',
     category: 'Периферия для ПК'
   }, {
     id: 11,
@@ -159,7 +176,7 @@ const goodsList = [
     price: '1 649',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1026202934.jpg',
-    'hoverImg': 'https://cdn1.ozone.ru/multimedia/c400/1026202933.jpg',
+    brand: 'A4Tech',
     category: 'Периферия для ПК'
   }, {
     id: 12,
@@ -168,7 +185,7 @@ const goodsList = [
     price: '1 097',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1025117257.jpg',
-    'hoverImg': 'https://cdn1.ozone.ru/multimedia/c400/1025117012.jpg',
+    brand: 'Trust',
     category: 'Периферия для ПК'
   }, {
     id: 13,
@@ -177,7 +194,7 @@ const goodsList = [
     price: '350',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1014472326.jpg',
-    'hoverImg': 'https://cdn1.ozone.ru/multimedia/c400/1014472325.jpg',
+    brand: 'Genius',
     category: 'Периферия для ПК'
   }, {
     id: 14,
@@ -186,7 +203,7 @@ const goodsList = [
     price: '1 279',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1026748248.jpg',
-    'hoverImg': 'https://cdn1.ozone.ru/multimedia/c400/1026748250.jpg',
+    brand: 'Orico',
     category: 'Периферия для ПК'
   }, {
     id: 15,
@@ -195,6 +212,7 @@ const goodsList = [
     price: '4 959',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1025053907.jpg',
+    brand: 'Trust',
     category: 'Периферия для ПК'
   }, {
     id: 16,
@@ -203,6 +221,7 @@ const goodsList = [
     price: '1 479',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1026951535.jpg',
+    brand: '',
     category: 'Игры и софт'
   }, {
     id: 17,
@@ -211,7 +230,7 @@ const goodsList = [
     price: '3 990',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1023840682.jpg',
-    'hoverImg': 'https://cdn1.ozone.ru/multimedia/c400/1023849642.jpg',
+    brand: '',
     category: 'Игры и софт'
   }, {
     id: 18,
@@ -228,7 +247,7 @@ const goodsList = [
     price: '9 412',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1013975751.jpg',
-    'hoverImg': 'https://cdn1.ozone.ru/multimedia/c400/1013975799.jpg',
+    brand: 'Microsoft',
     category: 'Игры и софт'
   }, {
     id: 20,
@@ -245,6 +264,7 @@ const goodsList = [
     price: '805',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1001559725.jpg',
+    brand: 'Abbyy',
     category: 'Игры и софт'
   },
   {
@@ -253,6 +273,7 @@ const goodsList = [
     colorAmount: '3',
     title: 'Destiny (Xbox 360)',
     price: '723',
+    brand: 'Microsoft',
     category: 'Игры и софт'
   }, {
     id: 23,
@@ -260,6 +281,7 @@ const goodsList = [
     colorAmount: '3',
     title: 'Игра Onrush (PS4 Sony)',
     price: '1 794',
+    brand: 'Sony',
     category: 'Игры и софт'
   },
 ]

@@ -1,16 +1,16 @@
 class Catalog {
-  constructor() {
+  constructor(options) {
     this.$catalog = document.querySelector('.catalog');
     this.$catalogBtn = this.$catalog.querySelector('.catalog__btn');
+    this.$catalogTitle = this.$catalog.querySelector('.catalog__title');
     this.$catalogList = this.$catalog.querySelector('.catalog__list');
 
-    this.init();
+    this.store = options.store;
   }
 
   init() {
     this.$catalogBtn.addEventListener('click', this.toggle.bind(this));
-    // this.$catalogBtn.addEventListener('blur', this.hide.bind(this));
-    this.$catalogList.addEventListener('click', this.getCategory.bind(this));
+    this.$catalogList.addEventListener('click', this.setCategory.bind(this));
   }
 
   toggle() {
@@ -21,11 +21,13 @@ class Catalog {
     this.$catalogList.classList.remove('catalog__list--active');
   }
 
-  getCategory({target}) {
+  setCategory({target}) {
     if (target.classList.contains('catalog__item')) {
       const category = target.textContent;
-      goods.setCategory(category);
+      this.store.dispatch({type: 'category', category: category});
+      // goods.setCategory(category);
       this.hide();
+      this.$catalogTitle.textContent = category;
     }
   }
 }

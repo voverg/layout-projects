@@ -1,5 +1,5 @@
 class Cart {
-  constructor() {
+  constructor(options) {
     this.$body = document.querySelector('body');
     this.$order = this.$body.querySelector('.order');
     this.$orderBadge = this.$order.querySelector('.order__badge');
@@ -11,8 +11,7 @@ class Cart {
 
     this.arr = [];
     this.totalPrice = 0;
-
-    this.init();
+    this.store = options.store;
   }
 
   init() {
@@ -23,6 +22,13 @@ class Cart {
     this.$close.addEventListener('click', this.hide.bind(this));
     this.$cart.addEventListener('click', this.hide.bind(this));
     this.$cartGoods.addEventListener('click', this.cardHandler.bind(this));
+
+    this.store.subscribe(() => {
+      this.state = this.store.getState();
+      if (!this.state.card) return;
+
+      this.add(this.state.card);
+    });
   }
 
   show() {
@@ -48,12 +54,14 @@ class Cart {
     this.$totalPrice.textContent = this.totalPrice;
   }
 
-  add(good) {
-    const newGood = {...good};
-    newGood.id = Math.random();
-    this.arr.push(newGood);
+  add(card) {
+    const newCard = {...card};
+    newCard.id = Math.random();
+    this.arr.push(newCard);
+    
     this.setData();
     this.setCountAndPrice();
+    this.store.dispatch({type: 'addCard', card: null});
   }
 
   cardHandler({target}) {

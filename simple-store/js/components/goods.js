@@ -1,22 +1,29 @@
 class Goods {
-  constructor(arr) {
-    this.arr = arr;
-    this.filteredArr = arr;
+  constructor(options) {
     this.$goods = document.querySelector('.goods');
 
-    this.init();
+    this.arr = goodsList;
+    this.filteredArr = this.arr;
+    this.store = options.store;
+    this.state = {};
   }
 
   init() {
     this.render();
     this.$goods.addEventListener('click', this.goodsHandler.bind(this));
+
+    this.store.subscribe(() => {
+      this.state = this.store.getState();
+      this.setCategory(this.state.category);
+    });
   }
 
   goodsHandler({target}) {
     if (target.classList.contains('card__btn')) {
       const cardId = +target.closest('.card').dataset.id;
       const card = this.arr.find(item => item.id === cardId);
-      cart.add(card);
+      
+      this.store.dispatch({type: 'addCard', card: card});
     }
   }
 

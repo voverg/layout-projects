@@ -1,12 +1,10 @@
 class Burger {
-  constructor() {
+  constructor(options) {
     this.$body = document.querySelector('body');
     this.$burgerBtn = this.$body.querySelector('.burger__btn');
     this.$filter = this.$body.querySelector('.filter');
     this.$filterWrapper = this.$filter.closest('.filter__wrapper');
     this.$filterCloseBtn = this.$filter.querySelector('.filter__close');
-
-    this.init();
   }
 
   init() {
