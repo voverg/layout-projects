@@ -1,7 +1,7 @@
 class Filter {
   constructor(options) {
     this.$filter = document.querySelector('.filter');
-    this.$priceSlider = this.$filter.querySelector('.filter__price-slider');
+    this.$priceSlider = this.$filter.querySelector('.price__slider');
     this.$minPrice = this.$filter.querySelector('#min-price');
     this.$maxPrice = this.$filter.querySelector('#max-price');
     this.$brandList = this.$filter.querySelector('.brand__list');

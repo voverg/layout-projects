@@ -1,0 +1,101 @@
+/*Responsive css*/
+@media (max-width: 991px) {
+  .card {
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .burger__btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 30px;
+    cursor: pointer;
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .order {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .catalog {
+    order: 2;
+  }
+  .catalog__item {
+    padding: 10px 3px;
+  }
+  .catalog__item:active {
+    background-color: var(--red-hover);
+  }
+  .search {
+    padding: 0 0 0 10px;
+    order: 3;
+  }
+
+  .main {
+    padding-top: 110px;
+  }
+
+  .filter__wrapper {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 100;
+  }
+  .filter__wrapper--active {
+    visibility: visible;
+  }
+
+  .filter {
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    padding: 20px;
+    transform: translateX(-100%);
+    overflow-y: auto;
+    transition: .3s;
+  }
+  .filter--active {
+    transform: translateX(0);
+  }
+  .filter__close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--red);
+    cursor: pointer;
+  }
+  .price__slider {
+    margin: 20px 0;
+  }
+  .price__option {}
+
+  .goods {
+    padding-left: 0;
+  }
+  .card,
+  .cart__goods .card {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .search {
+    width: 30%;
+  }
+}

@@ -10,6 +10,7 @@
   <title>Simple Store</title>
   <link rel="shortcut icon" href="icons/cart.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.style.css">
 </head>
 <body>
   <header class="header">
@@ -60,20 +61,25 @@
         <div class="filter__close">&#10006;</div>
         <h3 class="filter__title">Фильтр</h3>
 
-        <div class="filter__price">
-          <h4 class="filter__price-title">Цена</h4>
-          <input type="range" class="filter__price-slider" min="0" max="100000" value="0">
-          <form class="filter__price-range">
-            <label for="">от
-              <input type="number" min="0" max="100000" class="filter__price-input" id="min-price" placeholder="0">
-            </label>
-            <label for="">до
-              <input type="number" min="0" max="100000" class="filter__price-input" id="max-price" placeholder="0">
-            </label>
-          </form>
-        </div>
+        <form class="filter__price price">
+          <h4 class="price__title">Цена</h4>
+          <input type="range" class="price__slider" min="0" max="100000" value="0">
+          <label for="">от
+            <input type="number" min="0" max="100000" class="price__input" id="min-price" placeholder="0">
+          </label>
+          <label for="">до
+            <input type="number" min="0" max="100000" class="price__input" id="max-price" placeholder="0">
+          </label>
 
-        <div class="brand">
+          <select name="price__sort" id="price__sort" class="price__sort">
+            <option value="" class="price__option" selected disabled hidden>Сортировка</option>
+            <option value="ascending" class="price__option">По возрастанию</option>
+            <option value="descending" class="price__option">По убыванию</option>
+          </select>
+
+        </form>
+
+        <form class="filter__brand brand">
           <h4 class="brand__title">Бренды</h4>
           <ul class="brand__list">
 <!--             <li class="brand__item">
@@ -82,7 +88,7 @@
               </label>
             </li> -->
           </ul>
-        </div>
+        </form>
         
       </div>
     </aside>
