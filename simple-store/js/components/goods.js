@@ -27,15 +27,17 @@ class Goods {
   }
 
   filter() {
-    const categoryArr = this.setCategory(this.state.category, this.arr);
-    const brandArr = this.setBrands(this.state.brands, categoryArr);
-    const priceFilterArr = this.setPriceFilter(this.state.minPrice, this.state.maxPrice, brandArr);
+    const categoryArr = this.getCategory(this.state.category, this.arr);
+    const brandArr = this.getBrands(this.state.brands, categoryArr);
+    const priceFilterArr = this.getPriceFilter(this.state.minPrice, this.state.maxPrice, brandArr);
+    const sortPriceArr = this.getSortPrice(this.state.sort, this.arr);
     const searchArr = this.search(this.state.search, priceFilterArr);
 
+    // console.log(sortPriceArr);
     this.render(searchArr);
   }
 
-  setCategory(category = 'Все категории', arr) {
+  getCategory(category = 'Все категории', arr) {
     let categoryArr = [];
 
     if (category === 'Все категории') {
@@ -47,7 +49,7 @@ class Goods {
     return categoryArr;
   }
 
-  setBrands(brands, arr) {
+  getBrands(brands, arr) {
     let brandFilterArr = arr;
 
     if (brands.length) {
@@ -59,7 +61,7 @@ class Goods {
     return brandFilterArr;
   }
 
-  setPriceFilter(min, max, arr) {
+  getPriceFilter(min, max, arr) {
     let priceFilterArr = arr.filter(item => {
       const price = +item.price.replace(' ', '');
       return price >= min && price <= max;
@@ -70,6 +72,11 @@ class Goods {
     }
     
     return priceFilterArr;
+  }
+
+  getSortPrice(method, arr) {
+    const sortedArr = sort(method, arr);
+    return sortedArr;
   }
 
   search(text, arr) {

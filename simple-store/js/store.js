@@ -28,6 +28,9 @@ function rootReducer(state, action) {
     case 'brands':
       state = { ...state, brands: [...action.brands] };
       return state;
+    case 'sort':
+      state = {...state, sort: action.sort};
+      return state;
     case 'search':
       state = {...state, search: action.search};
       return state;

@@ -4,6 +4,7 @@ const initialState = {
   minPrice: 0,
   maxPrice: 0,
   brands: [],
+  sort: '',
   search: '',
   card: null,
 };
