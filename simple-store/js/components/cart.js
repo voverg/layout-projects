@@ -49,7 +49,7 @@ class Cart {
     this.totalPrice = 0;
     this.$orderBadge.innerHTML = this.arr.length;
     this.arr.forEach(item => {
-      this.totalPrice += +item.price.replace(' ', '');
+      this.totalPrice += getPrice(item);
     });
     this.$totalPrice.textContent = this.totalPrice;
   }

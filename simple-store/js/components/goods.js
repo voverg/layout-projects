@@ -9,7 +9,7 @@ class Goods {
 
   init() {
     this.render(this.arr);
-    this.$goods.addEventListener('click', this.goodsHandler.bind(this));
+    this.$goods.addEventListener('click', this.addToCart.bind(this));
 
     this.store.subscribe(() => {
       this.state = this.store.getState();
@@ -17,7 +17,7 @@ class Goods {
     });
   }
 
-  goodsHandler({target}) {
+  addToCart({target}) {
     if (target.classList.contains('card__btn')) {
       const cardId = +target.closest('.card').dataset.id;
       const card = this.arr.find(item => item.id === cardId);
@@ -30,10 +30,11 @@ class Goods {
     const categoryArr = this.getCategory(this.state.category, this.arr);
     const brandArr = this.getBrands(this.state.brands, categoryArr);
     const priceFilterArr = this.getPriceFilter(this.state.minPrice, this.state.maxPrice, brandArr);
-    const sortPriceArr = this.getSortPrice(this.state.sort, this.arr);
-    const searchArr = this.search(this.state.search, priceFilterArr);
+    const sortPriceArr = this.getSortPrice(this.state.sort, priceFilterArr);
+    const searchArr = this.search(this.state.search, sortPriceArr);
 
-    // console.log(sortPriceArr);
+    // sortPriceArr.forEach(item => console.log(item.price));
+
     this.render(searchArr);
   }
 
@@ -63,7 +64,7 @@ class Goods {
 
   getPriceFilter(min, max, arr) {
     let priceFilterArr = arr.filter(item => {
-      const price = +item.price.replace(' ', '');
+      const price = getPrice(item);
       return price >= min && price <= max;
     });
 
