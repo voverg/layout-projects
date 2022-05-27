@@ -54,7 +54,7 @@ class Filter {
   }
 
   setBrands({target}) {
-    const brandName = target.closest('label').textContent.trim();
+    const brandName = target.dataset.brand;
     const checked = target.checked;
 
     if (checked) {
@@ -74,11 +74,11 @@ class Filter {
     this.$brandList.innerHTML = list.join(' ');
   }
 
-  createElem(elem) {
+  createElem(item) {
     return `
       <li class="brand__item">
         <label class="brand__item-label">
-          <input type="checkbox" class="brand__item-input">${elem}
+          <input type="checkbox" class="brand__item-input" data-brand="${item}">${item}
         </label>
       </li>
     `;

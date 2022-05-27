@@ -13,3 +13,9 @@ function sort(method, arr) {
 function getPrice(obj) {
   return +obj.price.replace(' ', '');
 }
+
+
+function pagination(arr) {
+  // console.log(arr);
+  // return arr;
+}

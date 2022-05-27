@@ -4,7 +4,7 @@ class Cart {
     this.$order = this.$body.querySelector('.order');
     this.$orderBadge = this.$order.querySelector('.order__badge');
     this.$cart = this.$body.querySelector('.cart');
-    this.$cartBody = this.$body.querySelector('.cart__body');
+    // this.$cartContent = this.$body.querySelector('.cart__content');
     this.$close = this.$cart.querySelector('.cart__close');
     this.$totalPrice = this.$cart.querySelector('.cart__total-value');
     this.$cartGoods = this.$cart.querySelector('.cart__goods');

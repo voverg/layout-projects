@@ -5,7 +5,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .burger__btn {
     display: block;
@@ -60,7 +59,7 @@
   .filter {
     top: 0;
     left: 0;
-    width: 80%;
+    width: 60%;
     height: 100vh;
     padding: 20px;
     transform: translateX(-100%);
@@ -89,13 +88,23 @@
   }
   .card,
   .cart__goods .card {
-    width: 100%;
+    width: 50%;
   }
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .search {
     width: 30%;
   }
+
+  .filter {
+    width: 80%;
+  }
+
+  .card,
+  .cart__goods .card {
+    width: 100%;
+  }
+
 }
