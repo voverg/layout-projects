@@ -21,7 +21,8 @@
     transform: translateX(-50%);
   }
   .order {
-    width: 100%;
+    width: 50%;
+    margin-left: 50%;
     padding-bottom: 10px;
   }
   .catalog {
@@ -81,7 +82,9 @@
   .price__slider {
     margin: 20px 0;
   }
-  .price__option {}
+  .brand__list {
+    height: 350px;
+  }
 
   .goods {
     padding-left: 0;

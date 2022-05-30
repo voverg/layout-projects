@@ -34,66 +34,15 @@ class Goods {
   }
 
   filter() {
-    const categoryArr = this.getCategory(this.state.category, this.arr);
-    const brandArr = this.getBrands(this.state.brands, categoryArr);
-    const priceFilterArr = this.getPriceFilter(this.state.minPrice, this.state.maxPrice, brandArr);
-    const sortPriceArr = this.getSortPrice(this.state.sort, priceFilterArr);
-    const searchArr = this.search(this.state.search, sortPriceArr);
+    const categoryArr = getCategoryFilteredArr(this.state.category, this.arr);
+    const brandArr = getBrandsFilteredArr(this.state.brands, categoryArr);
+    const priceFilteredArr = getPriceFilteredArr(this.state.minPrice, this.state.maxPrice, brandArr);
+    const sortPriceArr = getPriceSortedArr(this.state.sort, priceFilteredArr);
+    const searchArr = getSearchedArr(this.state.search, sortPriceArr);
 
     // sortPriceArr.forEach(item => console.log(item.price));
 
     this.render(searchArr);
-  }
-
-  getCategory(category = 'Все категории', arr) {
-    let categoryArr = [];
-
-    if (category === 'Все категории') {
-      categoryArr = arr;
-    } else {
-      categoryArr = arr.filter(item => item.category === category);
-    }
-
-    return categoryArr;
-  }
-
-  getBrands(brands, arr) {
-    let brandFilterArr = arr;
-
-    if (brands.length) {
-      brandFilterArr = arr.filter(item => {
-        return brands.includes(item.brand);
-      });
-    }
-    
-    return brandFilterArr;
-  }
-
-  getPriceFilter(min, max, arr) {
-    let priceFilterArr = arr.filter(item => {
-      const price = getPrice(item);
-      return price >= min && price <= max;
-    });
-
-    if (max === 0) {
-      priceFilterArr = arr;
-    }
-    
-    return priceFilterArr;
-  }
-
-  getSortPrice(method, arr) {
-    const sortedArr = sort(method, arr);
-    return sortedArr;
-  }
-
-  search(text, arr) {
-    const searchArr = arr.filter(item => {
-      const title = item.title.toLowerCase();
-      return title.includes(text.toLowerCase().trim())
-    });
-
-    return searchArr;
   }
 
   render(arr) {
@@ -104,6 +53,15 @@ class Goods {
     });
 
     this.$goods.innerHTML = list.join(' ') ? list.join(' ') : noRusultsBlock;
+
+    // Animation with change any filter option
+    // const $cards = this.$goods.querySelectorAll('.card');
+    // $cards.forEach(card => {
+    //   setTimeout(() => {
+    //     card.classList.add('card--show');
+    //   }, 0);
+    // });
+    
   }
 
   createElem(elem) {

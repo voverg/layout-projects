@@ -179,6 +179,7 @@
 
 .main {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   padding-top: 90px;
   min-height: 90vh;
@@ -227,6 +228,9 @@
 }
 .brand__list {
   list-style: none;
+  overflow-y: auto;
+  min-height: 100px;
+  height: 250px;
 }
 .brand__item {
   margin-bottom: 2px;
@@ -253,6 +257,8 @@
 
 .goods__no-results {
   margin: 30% auto;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 /*Card*/
@@ -264,12 +270,17 @@
   padding: 10px 20px;
   box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: var(--transition);
   cursor: pointer;
+  /*opacity: 0;*/
+  transition: var(--transition);
+  /*transition: opacity .3s;*/
 }
 .card:hover {
   box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.3);
 }
+/*.card--show {
+  opacity: 1;
+}*/
 
 .card__remove {
   position: absolute;
@@ -333,6 +344,33 @@
   box-shadow: 0 0 15px rgba(220, 62, 42, 0.7);
 }
 
+/*Pagination*/
+.pagination {
+  flex-grow: 1;
+  width: 100%;
+  padding: 30px 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.pagination__btn {
+  min-width: 30px;
+  padding: 3px;
+  background-color: #fff;
+  color: #777;
+  border: 1px solid #777;
+  border-radius: var(--radius);
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.pagination__btn:hover,
+.pagination__btn--current {
+  background-color: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
 /* -------------- Корзина cart ---------- */
 .cart {
   display: none;
