@@ -20,23 +20,26 @@ function createStore(rootReducer, initialState) {
 function rootReducer(state, action) {
   switch (action.type) {
     case 'category':
-      state = {...state, category: action.category};
+      state = {...state, ...action.payload};
       return state;
     case 'price':
       state = {...state, ...action.payload };
       return state;
     case 'brands':
-      state = { ...state, brands: [...action.brands] };
+      state = { ...state, ...action.payload };
       return state;
     case 'sort':
-      state = {...state, sort: action.sort};
+      state = { ...state, ...action.payload };
       return state;
     case 'search':
-      state = {...state, search: action.search};
+      state = { ...state, ...action.payload };
       return state;
     case 'addCard':
       state = { ...state, card: action.card };
       // state = { ...state, card: {...action.card} };
+      return state;
+    case 'currentPage':
+      state = {...state, ...action.payload};
       return state;
     default:
       return state;

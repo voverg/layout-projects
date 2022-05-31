@@ -11,6 +11,6 @@ class Search {
   }
 
   searchHandler({target}) {
-    this.store.dispatch({type: 'search', search: target.value});
+    this.store.dispatch({type: 'search', payload: {search: target.value, currentPage: 1} });
   }
 }

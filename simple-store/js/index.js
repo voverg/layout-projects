@@ -7,6 +7,7 @@ const initialState = {
   sort: '',
   search: '',
   card: null,
+  currentPage: 1,
 };
 const componentOptions = {
   store: createStore(rootReducer, initialState),

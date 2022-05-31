@@ -4,6 +4,10 @@ class Goods {
     this.$confirmIcon = document.querySelector('.confirm__icon');
 
     this.arr = goodsList;
+    this.currentPage = 0;
+    this.totalPages = 0;
+    this.pagination = new Pagination(options);
+
     this.store = options.store;
     this.state = {};
   }
@@ -15,6 +19,7 @@ class Goods {
     this.store.subscribe(() => {
       this.state = this.store.getState();
       this.filter();
+      // this.currentPage = this.state.currentPage;
     });
   }
 
@@ -40,28 +45,34 @@ class Goods {
     const sortPriceArr = getPriceSortedArr(this.state.sort, priceFilteredArr);
     const searchArr = getSearchedArr(this.state.search, sortPriceArr);
 
-    // sortPriceArr.forEach(item => console.log(item.price));
-
     this.render(searchArr);
+  }
+
+  getTotalPages(arr, limit = 6) {
+    this.totalPages = Math.ceil(arr.length / limit);
   }
 
   render(arr) {
     const noRusultsBlock = '<div class="goods__no-results">Не найдено ни одного товара...</div>';
-    const paginationArr = pagination(arr);
-    const list = arr.map(item => {
-      return this.createElem(item);
-    });
+    const limit = 6;
+    this.getTotalPages(arr, limit);
+    this.currentPage = this.state.currentPage ? this.state.currentPage : 1;
 
+    const paginationRequest = {
+      pageAmount: this.totalPages,
+      arrLength: arr.length,
+      currentPage: this.currentPage,
+      limit: limit,
+    };
+
+    this.pagination.render(paginationRequest);
+
+    const startCard = (this.currentPage - 1) * limit;
+    const pageArr = arr.slice(startCard, startCard + limit);
+
+    const list = pageArr.map( item =>  this.createElem(item) );
     this.$goods.innerHTML = list.join(' ') ? list.join(' ') : noRusultsBlock;
 
-    // Animation with change any filter option
-    // const $cards = this.$goods.querySelectorAll('.card');
-    // $cards.forEach(card => {
-    //   setTimeout(() => {
-    //     card.classList.add('card--show');
-    //   }, 0);
-    // });
-    
   }
 
   createElem(elem) {

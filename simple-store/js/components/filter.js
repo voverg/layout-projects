@@ -46,11 +46,11 @@ class Filter {
       this.minPrice = this.maxPrice;
     }
 
-    this.store.dispatch({type: 'price', payload: {minPrice: this.minPrice, maxPrice: this.maxPrice} });
+    this.store.dispatch({type: 'price', payload: {minPrice: this.minPrice, maxPrice: this.maxPrice, currentPage: 1} });
   }
 
   setSortPrice({target}) {
-    this.store.dispatch({type: 'sort', sort: target.value});
+    this.store.dispatch({type: 'sort', payload: {sort: target.value, currentPage: 1} });
   }
 
   setBrands({target}) {
@@ -63,7 +63,7 @@ class Filter {
       this.filterBrands = this.filterBrands.filter(item => item !== brandName);
     }
 
-    this.store.dispatch({type: 'brands', brands: this.filterBrands});
+    this.store.dispatch({type: 'brands', payload: {brands: this.filterBrands, currentPage: 1} });
   }
 
   render() {

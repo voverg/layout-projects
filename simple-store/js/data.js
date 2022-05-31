@@ -72,7 +72,7 @@ const goodsList = [
     category: 'Телефоны',
   },
   {
-    id: 0,
+    id: 9,
     colorAmount: '2',
     title: 'Игровая приставка Sony PlayStation 4 Pro',
     price: '33 990',
@@ -82,15 +82,16 @@ const goodsList = [
     category: 'Игровая приставка'
   },
   {
-    id: 24,
+    id: 10,
     colorAmount: '2',
     title: 'Игровая приставка Sony PlayStation 3 Super Slim',
     price: '16 499',
     link: 'https://cdn1.ozone.ru/multimedia/c400/1027495663.jpg',
     brand: 'Sony',
     category: 'Игровая приставка'
-  }, {
-    id: 25,
+  },
+  {
+    id: 11,
     colorAmount: '2',
     title: 'Игровая приставка Xbox One X',
     price: '39 990',
@@ -98,8 +99,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1024358491.jpg',
     brand: 'Microsoft',
     category: 'Игровая приставка'
-  }, {
-    id: 26,
+  },
+  {
+    id: 12,
     colorAmount: '2',
     title: 'Игровая приставка Xbox One S',
     price: '23 411',
@@ -107,8 +109,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1024822131.jpg',
     brand: 'Microsoft',
     category: 'Игровая приставка'
-  }, {
-    id: 27,
+  },
+  {
+    id: 13,
     colorAmount: '2',
     title: 'Игровая приставка Nintendo Switch',
     price: '24 751',
@@ -116,8 +119,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1021386685.jpg',
     brand: 'Nintendo',
     category: 'Игровая приставка'
-  }, {
-    id: 28,
+  },
+  {
+    id: 14,
     colorAmount: '2',
     title: 'Игровая приставка Sega Retro Genesis HD',
     price: '3 624',
@@ -125,8 +129,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1024928305.jpg',
     brand: 'Sega',
     category: 'Игровая приставка'
-  }, {
-    id: 29,
+  },
+  {
+    id: 15,
     colorAmount: '2',
     title: 'Игровая приставка Dendy Junior',
     price: '1 551',
@@ -134,8 +139,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1021877092.jpg',
     brand: 'Dendy',
     category: 'Игровая приставка'
-  }, {
-    id: 30,
+  },
+  {
+    id: 16,
     colorAmount: '2',
     title: 'Игровая приставка Sony PlayStation Classic',
     price: '10 445',
@@ -143,8 +149,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1025222877.jpg',
     brand: 'Sony',
     category: 'Игровая приставка'
-  }, {
-    id: 31,
+  },
+  {
+    id: 17,
     colorAmount: '2',
     title: 'Клавиатура Logitech Wireless Keyboard K360',
     price: '2 390',
@@ -152,8 +159,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1015518726.jpg',
     brand: 'Logitech',
     category: 'Периферия для ПК'
-  }, {
-    id: 9,
+  },
+  {
+    id: 18,
     colorAmount: '2',
     title: 'Клавиатура Defender Element HB-195',
     price: '566',
@@ -161,16 +169,18 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1028488609.jpg',
     brand: 'Defender',
     category: 'Периферия для ПК'
-  }, {
-    id: 10,
+  },
+  {
+    id: 19,
     title: 'Игровая клавиатура Steelseries Apex M750- RU',
     price: '12 848',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1027006299.jpg',
     brand: 'Steelseries',
     category: 'Периферия для ПК'
-  }, {
-    id: 11,
+  },
+  {
+    id: 20,
     colorAmount: '2',
     title: 'Мышь + коврик A4Tech Bloody V7M+B-071',
     price: '1 649',
@@ -178,8 +188,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1026202934.jpg',
     brand: 'A4Tech',
     category: 'Периферия для ПК'
-  }, {
-    id: 12,
+  },
+  {
+    id: 21,
     colorAmount: '2',
     title: 'Мышь Trust Varo',
     price: '1 097',
@@ -187,8 +198,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1025117257.jpg',
     brand: 'Trust',
     category: 'Периферия для ПК'
-  }, {
-    id: 13,
+  },
+  {
+    id: 22,
     colorAmount: '2',
     title: 'Мышь Genius DX-120',
     price: '350',
@@ -196,8 +208,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1014472326.jpg',
     brand: 'Genius',
     category: 'Периферия для ПК'
-  }, {
-    id: 14,
+  },
+  {
+    id: 23,
     colorAmount: '2',
     title: 'Коврик для мыши Orico MPA9040',
     price: '1 279',
@@ -205,8 +218,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1026748248.jpg',
     brand: 'Orico',
     category: 'Периферия для ПК'
-  }, {
-    id: 15,
+  },
+  {
+    id: 24,
     colorAmount: '2',
     title: 'Коврик для мыши Trust GXT 760 Glide RGB',
     price: '4 959',
@@ -214,8 +228,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1025053907.jpg',
     brand: 'Trust',
     category: 'Периферия для ПК'
-  }, {
-    id: 16,
+  },
+  {
+    id: 25,
     colorAmount: '2',
     title: 'Метро: Исход',
     price: '1 479',
@@ -223,8 +238,9 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1026951535.jpg',
     brand: '',
     category: 'Игры и софт'
-  }, {
-    id: 17,
+  },
+  {
+    id: 26,
     colorAmount: '2',
     title: 'Darksiders III. Коллекционное издание',
     price: '3 990',
@@ -232,16 +248,18 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1023840682.jpg',
     brand: '',
     category: 'Игры и софт'
-  }, {
-    id: 18,
+  },
+  {
+    id: 27,
     colorAmount: '2',
     title: 'Mortal Kombat X',
     price: '1 076',
     sale: false,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1011627377.jpg',
     category: 'Игры и софт'
-  }, {
-    id: 19,
+  },
+  {
+    id: 28,
     colorAmount: '2',
     title: 'Microsoft Windows 10 Home (32/64-bit)',
     price: '9 412',
@@ -249,16 +267,18 @@ const goodsList = [
     link: 'https://cdn1.ozone.ru/multimedia/c400/1013975751.jpg',
     brand: 'Microsoft',
     category: 'Игры и софт'
-  }, {
-    id: 20,
+  },
+  {
+    id: 29,
     colorAmount: '2',
     title: '1С:Предприятие 8.3. Версия для обучения программированию',
     price: '560',
     sale: true,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1015773076.jpg',
     category: 'Игры и софт'
-  }, {
-    id: 21,
+  },
+  {
+    id: 30,
     colorAmount: '2',
     title: 'ABBYY FotoTranslate',
     price: '805',
@@ -268,15 +288,16 @@ const goodsList = [
     category: 'Игры и софт'
   },
   {
-    id: 22,
+    id: 31,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1021419099.jpg',
     colorAmount: '3',
     title: 'Destiny (Xbox 360)',
     price: '723',
     brand: 'Microsoft',
     category: 'Игры и софт'
-  }, {
-    id: 23,
+  },
+  {
+    id: 32,
     link: 'https://cdn1.ozone.ru/multimedia/c400/1023547851.jpg',
     colorAmount: '3',
     title: 'Игра Onrush (PS4 Sony)',
@@ -284,4 +305,4 @@ const goodsList = [
     brand: 'Sony',
     category: 'Игры и софт'
   },
-]
+];

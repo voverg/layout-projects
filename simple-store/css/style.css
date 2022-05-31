@@ -348,7 +348,7 @@
 .pagination {
   flex-grow: 1;
   width: 100%;
-  padding: 30px 20px 10px;
+  padding: 40px 20px 10px calc(var(--filter-width) + 20px);
   display: flex;
   justify-content: center;
   align-items: center;

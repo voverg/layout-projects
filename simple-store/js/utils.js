@@ -58,11 +58,9 @@ function getSearchedArr(text, arr) {
 
 // Get price from card object
 function getPrice(obj) {
+  if (!obj.price) {
+    throw new Error('No price obect');
+  }
   return +obj.price.replace(' ', '');
 }
 
-// Pagination
-function pagination(arr) {
-  // console.log(arr);
-  // return arr;
-}
