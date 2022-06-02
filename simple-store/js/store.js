@@ -16,7 +16,6 @@ function createStore(rootReducer, initialState) {
   }
 }
 
-
 function rootReducer(state, action) {
   switch (action.type) {
     case 'category':
@@ -33,10 +32,6 @@ function rootReducer(state, action) {
       return state;
     case 'search':
       state = { ...state, ...action.payload };
-      return state;
-    case 'addCard':
-      state = { ...state, card: action.card };
-      // state = { ...state, card: {...action.card} };
       return state;
     case 'currentPage':
       state = {...state, ...action.payload};

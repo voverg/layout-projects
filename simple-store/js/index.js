@@ -1,4 +1,4 @@
-const components = [Burger, Catalog, Cart, Goods, Filter, Search];
+const components = [Burger, Catalog, Goods, Filter, Search];
 const initialState = {
   category: 'Все категории',
   minPrice: 0,

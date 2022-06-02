@@ -1,7 +1,7 @@
 class Pagination {
   constructor(options) {
     this.$pagination = document.querySelector('.pagination');
-    this.totalPages = 0;
+
     this.currentPage = 1;
     this.store = options.store;
     this.state = {};
@@ -24,18 +24,9 @@ class Pagination {
     this.store.dispatch({type: 'currentPage', payload: {currentPage: this.currentPage} });
   }
 
-  changeCurrentPage(number) {
-    this.currentPage = number;
-    this.store.dispatch({type: 'currentPage', payload: {currentPage: this.currentPage} });
-  }
-
   render({pageAmount, arrLength, currentPage, limit}) {
     const btnList = [];
     this.currentPage = currentPage;
-
-    if (pageAmount === 0) {
-      this.$pagination.innerHTML = '';
-    }
 
     for (let i = 1; i <= pageAmount; i++) {
       const item = {};
@@ -43,8 +34,9 @@ class Pagination {
       item.current = currentPage === i ? true : false;
 
       btnList.push(this.createElem(item));
-      this.$pagination.innerHTML = arrLength <= limit ? '' : btnList.join('');
     }
+
+    this.$pagination.innerHTML = arrLength <= limit ? '' : btnList.join('');
   }
 
   createElem(item, current = false) {

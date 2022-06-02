@@ -12,6 +12,8 @@ class Cart {
     this.arr = [];
     this.totalPrice = 0;
     this.store = options.store;
+
+    this.init();
   }
 
   init() {
@@ -22,13 +24,6 @@ class Cart {
     this.$close.addEventListener('click', this.hide.bind(this));
     this.$cart.addEventListener('click', this.hide.bind(this));
     this.$cartGoods.addEventListener('click', this.cardHandler.bind(this));
-
-    this.store.subscribe(() => {
-      this.state = this.store.getState();
-      if (!this.state.card) return;
-
-      this.add(this.state.card);
-    });
   }
 
   show() {
@@ -61,7 +56,6 @@ class Cart {
     
     this.setData();
     this.setCountAndPrice();
-    this.store.dispatch({type: 'addCard', card: null});
   }
 
   cardHandler({target}) {

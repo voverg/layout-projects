@@ -5,8 +5,9 @@ class Goods {
 
     this.arr = goodsList;
     this.currentPage = 0;
-    this.totalPages = 0;
+    this.pageAmount = 0;
     this.pagination = new Pagination(options);
+    this.cart = new Cart(options);
 
     this.store = options.store;
     this.state = {};
@@ -26,9 +27,8 @@ class Goods {
   addToCart({target}) {
     if (target.classList.contains('card__btn')) {
       const cardId = +target.closest('.card').dataset.id;
-      const card = this.arr.find(item => item.id === cardId);
-      // Dispatch data of a new cart to the store
-      this.store.dispatch({type: 'addCard', card: card});
+      const cardData = this.arr.find(item => item.id === cardId);
+      this.cart.add(cardData);
 
       // Show animation with add a new card to the cart
       this.$confirmIcon.classList.add('confirm__icon--show');
@@ -48,18 +48,18 @@ class Goods {
     this.render(searchArr);
   }
 
-  getTotalPages(arr, limit = 6) {
-    this.totalPages = Math.ceil(arr.length / limit);
+  setPageAmount(arr, limit = 6) {
+    this.pageAmount = Math.ceil(arr.length / limit);
   }
 
   render(arr) {
-    const noRusultsBlock = '<div class="goods__no-results">Не найдено ни одного товара...</div>';
-    const limit = 6;
-    this.getTotalPages(arr, limit);
+    // Работа с пагинацией
+    const limit = 6; // Кол-во карточек на странице
+    this.setPageAmount(arr, limit); // Устанавливаем кол-во страниц
     this.currentPage = this.state.currentPage ? this.state.currentPage : 1;
-
+    // Запрос на рендер блока с пагинацией с передачей параметров
     const paginationRequest = {
-      pageAmount: this.totalPages,
+      pageAmount: this.pageAmount,
       arrLength: arr.length,
       currentPage: this.currentPage,
       limit: limit,
@@ -67,11 +67,16 @@ class Goods {
 
     this.pagination.render(paginationRequest);
 
+    // Получаем массив карточек в зависимости от того, какой номер страницы
     const startCard = (this.currentPage - 1) * limit;
     const pageArr = arr.slice(startCard, startCard + limit);
 
+    // Рендер карточек с товарами в блоке goods
+    const noRusultsBlock = '<div class="goods__no-results">Не найдено ни одного товара...</div>';
     const list = pageArr.map( item =>  this.createElem(item) );
     this.$goods.innerHTML = list.join(' ') ? list.join(' ') : noRusultsBlock;
+    // Перемещение наверх при клике в блоке пагинации на другую страницу
+    document.documentElement.scrollIntoView(true);
 
   }
 
