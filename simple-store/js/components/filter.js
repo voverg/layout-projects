@@ -31,12 +31,13 @@ class Filter {
   }
 
   setMinPrice({target}) {
-    this.minPrice = +target.value;
+    this.minPrice = target.value ? +target.value : 0;
     this._setPrice();
   }
 
   setMaxPrice({target}) {
-    this.maxPrice = +target.value;
+    this.$priceSlider.value = target.value ? target.value : 0;
+    this.maxPrice = target.value ? +target.value : 0;
     this._setPrice();
   }
 
