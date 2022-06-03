@@ -130,7 +130,7 @@
 .search__input:focus {
   outline: none;
 }
-.search button {
+.search__btn {
   display: flex;
   align-items: center;
   width: 30px;
@@ -140,10 +140,10 @@
   border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
-.search button:focus {
+.search__btn:focus {
   outline: none;
 }
-.search button img {
+.search__icon {
   margin: 0 auto;
   width: 50%;
 }
@@ -258,6 +258,7 @@
 .goods__no-results {
   margin: 30% auto;
   font-size: 24px;
+  text-align: center;
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -394,7 +395,7 @@
   width: 97%;
   max-width: 1024px;
   min-height: 200px;
-  max-height: 90%;
+  /* max-height: 90%; */
   background-color: #fff;
   transform: translateX(-50%) translateY(-50%);
   padding: 25px;
