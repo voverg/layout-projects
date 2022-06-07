@@ -59,12 +59,13 @@
 
         <form class="filter__price price">
           <h4 class="price__title">Цена</h4>
-          <input type="range" class="price__slider" min="0" max="50000" value="0">
+          <input type="range" class="price__slider" min="0" max="39500" step="500" value="100" id="min-price-range" data-range="min">
+          <input type="range" class="price__slider" min="500" max="40000" step="500" value="40000" id="max-price-range" data-range="max">
           <label for="">от
-            <input type="number" min="0" max="100000" class="price__input" id="min-price" placeholder="0">
+            <input type="number" min="0" max="39500" step="500" class="price__input" id="min-price" value="0" placeholder="0">
           </label>
           <label for="">до
-            <input type="number" min="0" max="100000" class="price__input" id="max-price" placeholder="0">
+            <input type="number" min="500" max="40000" step="500" class="price__input" id="max-price" value="40000" placeholder="0">
           </label>
 
           <select name="price__sort" id="price__sort" class="price__sort">

@@ -1,7 +1,8 @@
 class Filter {
   constructor(options) {
     this.$filter = document.querySelector('.filter');
-    this.$priceSlider = this.$filter.querySelector('.price__slider');
+    this.$minPriceSlider = this.$filter.querySelector('#min-price-range');
+    this.$maxPriceSlider = this.$filter.querySelector('#max-price-range');
     this.$minPrice = this.$filter.querySelector('#min-price');
     this.$maxPrice = this.$filter.querySelector('#max-price');
     this.$sortPrice = this.$filter.querySelector('.price__sort');
@@ -10,15 +11,17 @@ class Filter {
     this.store = options.store;
     this.brands = ['Sony', 'Xiaomi', 'Huawei', 'Honor', 'Logitech', 'Defender', 'Genius', 'Microsoft', 'Nintendo', 'Sega', 'Dendy', 'Trust', 'Orico', 'Abbyy', 'Steelseries', 'A4Tech'];
     this.minPrice = 0;
-    this.maxPrice = 0;
+    this.maxPrice = 40000;
     this.filterBrands = [];
   }
 
   init() {
     this.render();
 
-    this.$priceSlider.addEventListener('input', this.sliderHandler.bind(this));
-    this.$priceSlider.addEventListener('change', this.setMaxPrice.bind(this));
+    this.$minPriceSlider.addEventListener('input', this.sliderHandler.bind(this));
+    this.$minPriceSlider.addEventListener('change', this.setMinPrice.bind(this));
+    this.$maxPriceSlider.addEventListener('input', this.sliderHandler.bind(this));
+    this.$maxPriceSlider.addEventListener('change', this.setMaxPrice.bind(this));
     this.$minPrice.addEventListener('input', this.setMinPrice.bind(this));
     this.$maxPrice.addEventListener('input', this.setMaxPrice.bind(this));
     this.$sortPrice.addEventListener('change', this.setSortPrice.bind(this));
@@ -26,25 +29,43 @@ class Filter {
   }
 
   sliderHandler({target}) {
-    this.$maxPrice.value = target.value;
-    this.maxPrice = +target.value;
+    if (target.dataset.range === 'min') {
+      this.$minPrice.value = target.value;
+      this.minPrice = +target.value;
+    } else if (target.dataset.range === 'max') {
+      this.$maxPrice.value = target.value;
+      this.maxPrice = +target.value;
+    }
+
+    if (this.maxPrice <= this.minPrice) {
+      this.ifMaxLessMin();
+    }
+  }
+
+  ifMaxLessMin() {
+    this.$minPriceSlider.value = this.maxPrice;
+    this.minPrice = this.maxPrice;
+    this.$minPrice.value = this.minPrice;
+    this.maxPrice += 500;
+    this.$maxPriceSlider.value = this.maxPrice;
+    this.$maxPrice.value = this.maxPrice;
   }
 
   setMinPrice({target}) {
+    this.$minPriceSlider.value = target.value ? target.value : 0;
     this.minPrice = target.value ? +target.value : 0;
     this._setPrice();
   }
 
   setMaxPrice({target}) {
-    this.$priceSlider.value = target.value ? target.value : 0;
+    this.$maxPriceSlider.value = target.value ? target.value : 0;
     this.maxPrice = target.value ? +target.value : 0;
     this._setPrice();
   }
 
   _setPrice() {
     if (this.maxPrice < this.minPrice) {
-      this.$minPrice.value = this.maxPrice;
-      this.minPrice = this.maxPrice;
+      this.ifMaxLessMin();
     }
 
     this.store.dispatch({type: 'price', payload: {minPrice: this.minPrice, maxPrice: this.maxPrice, currentPage: 1} });
