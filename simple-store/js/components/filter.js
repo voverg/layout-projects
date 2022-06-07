@@ -12,6 +12,7 @@ class Filter {
     this.brands = ['Sony', 'Xiaomi', 'Huawei', 'Honor', 'Logitech', 'Defender', 'Genius', 'Microsoft', 'Nintendo', 'Sega', 'Dendy', 'Trust', 'Orico', 'Abbyy', 'Steelseries', 'A4Tech'];
     this.minPrice = 0;
     this.maxPrice = 40000;
+    this.step = 500;
     this.filterBrands = [];
   }
 
@@ -46,20 +47,20 @@ class Filter {
     this.$minPriceSlider.value = this.maxPrice;
     this.minPrice = this.maxPrice;
     this.$minPrice.value = this.minPrice;
-    this.maxPrice += 500;
+    this.maxPrice += this.step;
     this.$maxPriceSlider.value = this.maxPrice;
     this.$maxPrice.value = this.maxPrice;
   }
 
   setMinPrice({target}) {
-    this.$minPriceSlider.value = target.value ? target.value : 0;
-    this.minPrice = target.value ? +target.value : 0;
+    this.minPrice = target.value ? +target.value : this.minPrice;
+    this.$minPriceSlider.value = this.minPrice;
     this._setPrice();
   }
 
   setMaxPrice({target}) {
-    this.$maxPriceSlider.value = target.value ? target.value : 0;
-    this.maxPrice = target.value ? +target.value : 0;
+    this.maxPrice = target.value ? +target.value : this.minPrice + this.step;
+    this.$maxPriceSlider.value = this.maxPrice;
     this._setPrice();
   }
 
