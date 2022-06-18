@@ -1,7 +1,12 @@
+// simple-store@Simple store
+// simple-store - название проекта и путь к нему
+// '@ - разделитель'
+// Simple store - отображаемое название проекта
 const titles = [
   'simple-store@Simple store',
   'zhk@Жилищный комплекс',
   '3d-landing@3D landing',
+  'cat-food@Cat food',
 ];
 
 function getData(list) {
