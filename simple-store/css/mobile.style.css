@@ -101,6 +101,10 @@
 }
 
 @media (max-width: 520px) {
+  .order__title {
+    display: none;
+  }
+
   .search {
     width: 30%;
   }
