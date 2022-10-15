@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сайт с плавным скроллом и красивым parallax 3d эффектом">
+  <meta name="keywords" content="html, css, javascript">
+   <meta name="og:image" content="../main/img/parallax-scrolling.png"> 
+  <title>Fairy Forest</title>
+  <link rel="shortcut icon" href="../main/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      
+      <header class="header">
+        <div class="layers">
+
+          <div class="layer__head">
+            <div class="layers__caption">Welcome to Parallax</div>
+            <div class="layers__title">Fairy Forest</div>
+          </div>
+
+          <div class="layer layer__base" style="background-image: url(img/layer-base.png);"></div>
+          <div class="layer layer__middle" style="background-image: url(img/layer-middle.png);"></div>
+          <div class="layer layer__front" style="background-image: url(img/layer-front.png);"></div>
+
+        </div>
+
+      </header>
+
+      <article class="main" style="background-image: url(img/dungeon.jpg)">
+        <div class="main__content">
+          <h2 class="main__title">To be continued</h2>
+          <p class="main__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur recusandae sint error, temporibus dignissimos sit impedit porro obcaecati, voluptates nisi molestiae explicabo quae et. Incidunt dolore atque provident. Aliquid veritatis modi obcaecati quidem corporis ratione illum repellendus! Ut amet esse incidunt iste, omnis eligendi cumque quas? Quos neque, nemo aperiam.</p>
+        </div>
+      </article>
+
+
+      <footer class="footer">
+        <p class="footer__text">Created by <a href="https://github.com/voverg" class="footer__link" rel="noopener noreferrer" target="_blank">Voverg</a></p>
+      </footer>
+      
+    </div>
+  </div>
+  
+  
+  <script src="libs/gsap/gsap.min.js"></script>
+  <script src="libs/gsap/ScrollTrigger.min.js"></script>
+  <script src="libs/gsap/ScrollSmoother.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -2,6 +2,7 @@
 
 :root {
   --blue: #3c485f;
+  --index: calc(1vw + 1vh);
 }
 
 *,
@@ -20,9 +21,10 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  font-size: calc(var(--index));
 }
 
-header {
+.header {
   flex-shrink: 0;
   width: 100%;
   min-height: 10vh;
@@ -32,12 +34,12 @@ header {
   text-align: center;
 }
 
-.container {
+.main {
   flex-grow: 1;
   width: 100%;
 }
 
-footer {
+.footer {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -49,16 +51,16 @@ footer {
   text-align: center;
 }
 
-footer a {
+.footer__link  {
   text-decoration: none;
   color: white;
 }
-footer a:hover {
+.footer__link:hover {
   color: #eae38b;
 }
 
 @media (max-width: 720px) {
-  header {
+  .header {
     font-size: .8rem;
   }
 }

@@ -7,6 +7,7 @@ const titles = [
   'zhk@Жилищный комплекс',
   '3d-landing@3D landing',
   'cat-food@Cat food',
+  'parallax-scrolling@Fairy Forest',
 ];
 
 function getData(list) {
