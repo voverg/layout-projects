@@ -82,3 +82,7 @@ function createCard(cardData) {
 
   return card;
 }
+
+function() {
+  return '';
+}
