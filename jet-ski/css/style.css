@@ -41,7 +41,7 @@ body {
   padding: 0 15px;
 }
 
-/*Header*/
+/* Header */
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -55,7 +55,17 @@ body {
   display: flex;
   gap: 50px;
 }
+.menu__link {
+  padding: 5px 0;
+}
+.menu__link:hover {
+  border-bottom: 1px solid var(--primary-bg);
+}
 
+.header__user {
+  display: flex;
+  gap: 50px;
+}
 .header__adress {
   position: relative;
   padding-left: 30px; /* Needs for left location icon */
@@ -69,10 +79,6 @@ body {
   height: 30px;
   background-image: url(../icons/location-icon.svg);
   background-size: cover;
-}
-
-.header__user {
-  display: flex;
 }
 .user__list {
   display: flex;
@@ -117,4 +123,58 @@ body {
 .categories__link:hover {
   font-weight: 600;
   border-bottom: 3px solid var(--primary-bg);
+}
+
+
+ /* Slider section */
+.slider-section__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+.slider {
+  width: 870px;
+}
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 5;
+  cursor: pointer;
+}
+.slider__btn-prev {
+  left: 15px;
+}
+.slider__btn-next {
+  right: 15px;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.slick-dots button {
+  width: 11px;
+  height: 11px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 0;
+  cursor: pointer;
+}
+li.slick-active button {
+  background-color: #fff;
+}
+
+.sale-item {
+  min-width: 265px;
 }
