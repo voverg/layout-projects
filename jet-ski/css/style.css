@@ -11,6 +11,7 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
 }
 
 ul,
@@ -41,6 +42,10 @@ body {
   font-weight: 400;
 }
 
+.section-page {
+  margin-bottom: 80px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -64,7 +69,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 122px;
+  /*min-height: 122px;*/
   padding-right: 15px;
   font-family: 'SFProDisplay-Bold', sans-serif;
   font-weight: 700;
@@ -113,7 +118,7 @@ body {
 .basket__num {
   position: absolute;
   right: -13px;
-  bottom: -10px;
+  bottom: -5px;
   min-width: 20px;
   height: 20px;
   padding: 2px;
@@ -128,7 +133,7 @@ body {
 
 .categories {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
   background-color: var(--secondary-bg);
@@ -148,7 +153,7 @@ body {
 .slider-section__inner {
   display: flex;
   justify-content: space-between;
-  padding: 80px 0;
+  /*padding: 80px 0;*/
 }
 .slider {
   width: 870px;
@@ -260,8 +265,9 @@ li.slick-active button {
   object-fit: contain;
 }
 .sale-item__title {
-  max-width: 232px;
+  padding: 0 40px;
   text-align: center;
+  font-size: 18px;
 }
 .sale-item__footer {
   width: 100%;
@@ -277,4 +283,48 @@ li.slick-active button {
   font-family: 'Barlow', sans-serif;
   font-weight: 700;
   color: var(--primary-bg);
+}
+
+/* Search section */
+.search__tabs {
+  margin-bottom: 25px;
+}
+.search__tabs-item {
+  padding: 11px 26px;
+}
+.search__tabs-item--active {
+  background-color: var(--secondary-bg);
+  border-radius: 5px;
+  font-weight: 700;
+}
+.search__content-item {
+  display: none;
+}
+.search__content-item--active {
+  display: block;
+}
+.search__content-form {
+  display: flex;
+}
+.search__content-input {
+  flex-grow: 1;
+  padding: 15px 20px;
+  background-color: var(--secondary-bg);
+  border: none;
+}
+.search__content-input::placeholder {
+  font-size: 16px;
+  color: #656464;
+}
+.search__content-btn {
+  margin-left: -3px;
+  padding: 15px 41px;
+  background-color: var(--primary-bg);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing:2px;
+  text-transform: uppercase;
 }

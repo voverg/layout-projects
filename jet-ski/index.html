@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header section-page">
     <div class="header__top">
       <div class="container">
         <div class="header__top-inner">
@@ -95,7 +95,7 @@
   </header>
 
   <!-- Slider bunner -->
-  <section class="slider-section">
+  <section class="slider-section section-page">
     <div class="container">
       <div class="slider-section__inner">
 
@@ -134,6 +134,40 @@
     </div>
   </section>
   
+  <section class="search section-page">
+    <div class="container">
+      <div class="search">
+
+        <div class="search__tabs">
+          <a href="#tab-1" class="search__tabs-item">Поиск по номеру</a>
+          <a href="#tab-2" class="search__tabs-item search__tabs-item--active">Поиск по марке</a>
+          <a href="#tab-3" class="search__tabs-item">Поиск по названию товара</a>
+        </div>
+
+        <div class="search__content">
+          <div id="tab-1" class="search__content-item">
+            <form class="search__content-form">
+              <input type="text" class="search__content-input" placeholder="Введите номер">
+              <button class="search__content-btn">искать</button>
+            </form>
+          </div>
+          <div id="tab-2" class="search__content-item search__content-item--active">
+            <form class="search__content-form">
+              <input type="text" class="search__content-input" placeholder="Введите марку">
+              <button class="search__content-btn">искать</button>
+            </form>
+          </div>
+          <div id="tab-3" class="search__content-item">
+            <form class="search__content-form">
+              <input type="text" class="search__content-input" placeholder="Введите название товара">
+              <button class="search__content-btn">искать</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
