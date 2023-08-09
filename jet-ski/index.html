@@ -138,26 +138,26 @@
     <div class="container">
       <div class="search">
 
-        <div class="search__tabs">
-          <a href="#tab-1" class="search__tabs-item">Поиск по номеру</a>
-          <a href="#tab-2" class="search__tabs-item search__tabs-item--active">Поиск по марке</a>
-          <a href="#tab-3" class="search__tabs-item">Поиск по названию товара</a>
+        <div class="search__tab-btns tab__btns">
+          <button class="search__tab-btn tab__btn" data-tab="1">Поиск по номеру</button>
+          <button class="search__tab-btn tab__btn" data-tab="2">Поиск по марке</button>
+          <button class="search__tab-btn tab__btn" data-tab="3">Поиск по названию товара</button>
         </div>
 
-        <div class="search__content">
-          <div id="tab-1" class="search__content-item">
+        <div class="search__content tabs">
+          <div id="tab-1" class="search__content-item tabs__item">
             <form class="search__content-form">
               <input type="text" class="search__content-input" placeholder="Введите номер">
               <button class="search__content-btn">искать</button>
             </form>
           </div>
-          <div id="tab-2" class="search__content-item search__content-item--active">
+          <div id="tab-2" class="search__content-item tabs__item">
             <form class="search__content-form">
               <input type="text" class="search__content-input" placeholder="Введите марку">
               <button class="search__content-btn">искать</button>
             </form>
           </div>
-          <div id="tab-3" class="search__content-item">
+          <div id="tab-3" class="search__content-item tabs__item">
             <form class="search__content-form">
               <input type="text" class="search__content-input" placeholder="Введите название товара">
               <button class="search__content-btn">искать</button>
@@ -169,6 +169,7 @@
     </div>
   </section>
 
+  <!-- Categories -->
   <section class="categories section-page">
     <div class="container">
       <div class="categories__inner">
@@ -235,8 +236,29 @@
     </div>
   </section>
 
+  <!-- Products -->
+  <section class="products section-page">
+    <div class="container">
+      <div class="products__inner">
+        <h2 class="products__title">Популярные товары</h2>
+        <div class="products__tab-btns tab__btns">
+          <a href="tab-1" class="products__tab-btn tab__btn">запчасти</a>
+          <a href="tab-2" class="products__tab-btn tab__btn">моторы</a>
+          <a href="tab-3" class="products__tab-btn tab__btn">шины</a>
+          <a href="tab-4" class="products__tab-btn tab__btn">электроника</a>
+          <a href="tab-5" class="products__tab-btn tab__btn">инструменты</a>
+          <a href="tab-6" class="products__tab-btn tab__btn">аксессуары</a>
+        </div>
+        <div class="products__content tabs"></div>
+      </div>
+    </div>
+  </section>
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/tabs.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

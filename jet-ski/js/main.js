@@ -10,22 +10,7 @@ $(function(){
                 </button>`,
   });
 
-  // Search section tabs
-  const $tabs = $('.search__tabs-item');
-  const $searchItems = $('.search__content-item');
-  const activeTab = 'search__tabs-item--active';
-  const activeSearch = 'search__content-item--active';
-
-  $tabs.on('click', function(event) {
-    event.preventDefault();
-    const $target = $(event.target);
-
-    $tabs.removeClass(activeTab);
-    $target.addClass(activeTab);
-
-    $searchItems.removeClass(activeSearch);
-    const $searchItem = $($target.attr('href'));
-    $searchItem.addClass(activeSearch);
-  });
-
 });
+
+// Handle search section tabs
+const searchTabs = new Tabs('.search');
