@@ -136,7 +136,7 @@
   
   <section class="search section-page">
     <div class="container">
-      <div class="search">
+      <div class="search__inner">
 
         <div class="search__tab-btns tab__btns">
           <button class="search__tab-btn tab__btn" data-tab="1">Поиск по номеру</button>
@@ -242,14 +242,21 @@
       <div class="products__inner">
         <h2 class="products__title">Популярные товары</h2>
         <div class="products__tab-btns tab__btns">
-          <a href="tab-1" class="products__tab-btn tab__btn">запчасти</a>
-          <a href="tab-2" class="products__tab-btn tab__btn">моторы</a>
-          <a href="tab-3" class="products__tab-btn tab__btn">шины</a>
-          <a href="tab-4" class="products__tab-btn tab__btn">электроника</a>
-          <a href="tab-5" class="products__tab-btn tab__btn">инструменты</a>
-          <a href="tab-6" class="products__tab-btn tab__btn">аксессуары</a>
+          <button class="products__tab-btn tab__btn" data-tab="1">запчасти</button>
+          <button class="products__tab-btn tab__btn" data-tab="2">моторы</button>
+          <button class="products__tab-btn tab__btn" data-tab="3">шины</button>
+          <button class="products__tab-btn tab__btn" data-tab="4">электроника</button>
+          <button class="products__tab-btn tab__btn" data-tab="5">инструменты</button>
+          <button class="products__tab-btn tab__btn" data-tab="6">аксессуары</button>
         </div>
-        <div class="products__content tabs"></div>
+        <div class="products__content tabs">
+          <div class="products__content-item tabs__item">1</div>
+          <div class="products__content-item tabs__item">2</div>
+          <div class="products__content-item tabs__item">3</div>
+          <div class="products__content-item tabs__item">4</div>
+          <div class="products__content-item tabs__item">5</div>
+          <div class="products__content-item tabs__item">6</div>
+        </div>
       </div>
     </div>
   </section>

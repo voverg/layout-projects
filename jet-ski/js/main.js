@@ -14,3 +14,6 @@ $(function(){
 
 // Handle search section tabs
 const searchTabs = new Tabs('.search');
+
+// Handle products section tabs
+const productsTabs = new Tabs('.products')
