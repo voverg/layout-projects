@@ -1,11 +1,11 @@
 $(function(){
   // Create a slider
-  $('.slider').slick({
+  $('.bunner__slider').slick({
     dots: true,
-    prevArrow: `<button class="slider__btn slider__btn-prev">
+    prevArrow: `<button class="bunner__slider-btn bunner__slider-btn-prev">
                   <img src="icons/arrow-left.svg">
                 </button>`,
-    nextArrow: `<button class="slider__btn slider__btn-next">
+    nextArrow: `<button class="bunner__slider-btn bunner__slider-btn-next">
                   <img src="icons/arrow-right.svg">
                 </button>`,
   });
