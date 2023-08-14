@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: 0;
 }
+button {
+  border: none;
+  background-color: transparent;
+}
 
 :root {
   --primary-color: #2F3035;
@@ -379,3 +383,53 @@ li.slick-active button {
 }
 
 /* Products */
+.products__title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 25px;
+}
+.products__tab-btns {
+  display: flex;
+  gap: 50px;
+  padding: 15px 0 25px;
+}
+.products__tab-btn {
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+.products__tab-btn.tab__btn--active {
+  border-bottom: 2px solid var(--primary-bg);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 271px;
+  min-height: 403px;
+  padding: 30px;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+}
+.card__favorite {
+  position: absolute;
+  top: 16px;
+  right: 19px;
+  width: 24px;
+  height: 22px;
+  border: 1px solid #000;
+}
+.card__title {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.card__price {
+  padding-right: 25px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
