@@ -28,8 +28,12 @@ p {
   margin: 0;
 }
 button {
+  margin: 0;
+  padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  outline: none;
 }
 
 :root {
@@ -40,7 +44,7 @@ button {
 
 body {
   color: var(--primary-color);
-  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-family: 'SFProDisplay', sans-serif;
   font-size: 20px;
   line-height: 25px;
   font-weight: 400;
@@ -85,7 +89,6 @@ body {
   align-items: center;
   /*min-height: 122px;*/
   padding-right: 15px;
-  font-family: 'SFProDisplay-Bold', sans-serif;
   font-weight: 700;
 }
 .menu__list {
@@ -158,10 +161,10 @@ body {
   display: block;
   padding: 15px 0;
   border-bottom: 3px solid transparent;
-  transition: border 0.3s;
+  transition: 0.3s;
 }
 .menu-categories__link:hover {
-  font-weight: 600;
+  text-shadow: 0 0 1px #000;
   border-bottom: 3px solid var(--primary-bg);
 }
 
@@ -398,6 +401,7 @@ li.slick-active button {
   transition: 0.3s;
 }
 .products__tab-btn.tab__btn--active {
+  text-shadow: 0 0 1px #000;
   border-bottom: 2px solid var(--primary-bg);
 }
 
@@ -413,13 +417,32 @@ li.slick-active button {
   border-radius: 3px;
   border: 1px solid #cdcdcd;
 }
+.card:hover {
+  color: var(--primary-bg);
+  box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.25);
+}
+.card__sale::before {
+  content: 'sale';
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: var(--primary-bg);
+  text-transform: uppercase;
+}
 .card__favorite {
   position: absolute;
-  top: 16px;
-  right: 19px;
-  width: 24px;
-  height: 22px;
-  border: 1px solid #000;
+  top: 12px;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+  background: url('../icons/favorite-icon.svg') no-repeat center;
+}
+.card__favorite--active {
+  background: url('../icons/favorite-active-icon.svg') no-repeat center;
 }
 .card__title {
   margin-bottom: 25px;
@@ -427,9 +450,36 @@ li.slick-active button {
   font-size: 18px;
   font-weight: 400;
 }
+.card__img {
+  max-width: 100%;
+}
 .card__price {
   padding-right: 25px;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
+}
+.card__basket {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px 0px 0px 0px;
+  background: var(--primary-bg) url('../icons/basket-white-icon.svg') no-repeat center;
+}
+.card--hover-text {
+  position: absolute;
+  top: 30%;
+  padding: 18px 22px;
+  display: none;
+  opacity: 0.9;
+  background: #FFF;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
+  font-size: 20px;
+  color: var(--primary-color);
+}
+.card:hover .card--hover-text {
+  display: block;
 }

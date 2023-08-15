@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'SFProDisplay-Regular';
+  font-family: 'SFProDisplay';
   src: local('SFProDisplay-Regular'),
        url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
        url('../fonts/SFProDisplay-Regular.woff') format('woff');
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: 'SFProDisplay-Medium';
+  font-family: 'SFProDisplay';
   src: local('SFProDisplay-Medium'),
        url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
        url('../fonts/SFProDisplay-Medium.woff') format('woff');
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-family: 'SFProDisplay-Semibold';
+  font-family: 'SFProDisplay';
   src: local('SFProDisplay-Semibold'),
        url('../fonts/SFProDisplay-Semibold.woff2') format('woff2'),
        url('../fonts/SFProDisplay-Semibold.woff') format('woff');
@@ -29,7 +29,7 @@
 }
 
 @font-face {
-  font-family: 'SFProDisplay-Bold';
+  font-family: 'SFProDisplay';
   src: local('SFProDisplay-Bold'),
        url('../fonts/SFProDisplay-Bold.woff2') format('woff2'),
        url('../fonts/SFProDisplay-Bold.woff') format('woff');

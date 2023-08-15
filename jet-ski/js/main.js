@@ -16,4 +16,16 @@ $(function(){
 const searchTabs = new Tabs('.search');
 
 // Handle products section tabs
-const productsTabs = new Tabs('.products')
+const productsTabs = new Tabs('.products');
+
+// Events
+document.addEventListener('click', clickHandler);
+
+function clickHandler(event) {
+  if (event.target.dataset.type === 'card-favorite') {
+    event.preventDefault();
+    event.target.classList.toggle('card__favorite--active');
+  } else if (event.target.dataset.type === 'card-basket') {
+    event.preventDefault();
+  }
+}
