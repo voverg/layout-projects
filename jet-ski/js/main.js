@@ -2,19 +2,24 @@
 const searchTabs = new Tabs('.search');
 
 // Handle products section tabs
-const productsTabs = new Tabs('.products');
+const popularProductsTabs = new Tabs('.popular');
+const similarProductsTabs = new Tabs('.similar');
 
-// Events
-document.addEventListener('click', clickHandler);
+// Create products
+const products = new Products(productList);
+const replacementCards = products.createCards('replacement');
+const electronicsCards = products.createCards('electronics');
 
-function clickHandler(event) {
-  if (event.target.dataset.type === 'card-favorite') {
-    event.preventDefault();
-    event.target.classList.toggle('card__favorite--active');
-  } else if (event.target.dataset.type === 'card-basket') {
-    event.preventDefault();
-  }
-}
+const $popReplacement = document.getElementById('pop-replacement');
+$popReplacement.innerHTML = replacementCards.join('');
+const $popElectronics = document.getElementById('pop-electronics');
+$popElectronics.innerHTML = electronicsCards.join('');
+
+const $similarReplacement = document.getElementById('similar-replacement');
+$similarReplacement.innerHTML = replacementCards.join('');
+const $similarElectronics = document.getElementById('similar-electronics');
+$similarElectronics.innerHTML = electronicsCards.join('');
+
 
 // Sliders
 $(function(){
@@ -45,3 +50,14 @@ $(function(){
 });
 
 
+// Events
+document.addEventListener('click', clickHandler);
+
+function clickHandler(event) {
+  if (event.target.dataset.type === 'card-favorite') {
+    event.preventDefault();
+    event.target.classList.toggle('card__favorite--active');
+  } else if (event.target.dataset.type === 'card-basket') {
+    event.preventDefault();
+  }
+}
