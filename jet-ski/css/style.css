@@ -396,12 +396,6 @@ li.slick-active button {
 }
 
 /* Products */
-.products__slider-btn-prev {
-  left: -30px;
-}
-.products__slider-btn-next {
-  right: -10px;
-}
 .products__title {
   font-family: 'Barlow', sans-serif;
   font-size: 25px;
@@ -423,6 +417,16 @@ li.slick-active button {
 
 .products__content {
   margin-bottom: 35px;
+}
+.products__slider {
+  width: 100%;
+  padding: 0;
+}
+.products__slider-btn-prev {
+  left: -30px;
+}
+.products__slider-btn-next {
+  right: -10px;
 }
 
 .card {
