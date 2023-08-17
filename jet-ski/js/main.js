@@ -6,19 +6,13 @@ const popularProductsTabs = new Tabs('.popular');
 const similarProductsTabs = new Tabs('.similar');
 
 // Create products
+const categoryList = ['replacement', 'electronics'];
 const products = new Products(productList);
-const replacementCards = products.createCards('replacement');
-const electronicsCards = products.createCards('electronics');
 
-const $popReplacement = document.getElementById('pop-replacement');
-$popReplacement.innerHTML = replacementCards.join('');
-const $popElectronics = document.getElementById('pop-electronics');
-$popElectronics.innerHTML = electronicsCards.join('');
-
-const $similarReplacement = document.getElementById('similar-replacement');
-$similarReplacement.innerHTML = replacementCards.join('');
-const $similarElectronics = document.getElementById('similar-electronics');
-$similarElectronics.innerHTML = electronicsCards.join('');
+categoryList.forEach((category) => {
+  products.addCards( document.getElementById(`pop-${category}`), category );
+  products.addCards( document.getElementById(`similar-${category}`), category );
+});
 
 
 // Sliders

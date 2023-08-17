@@ -541,3 +541,26 @@ li.slick-active button {
   font-size: 15px;
   letter-spacing: 2px;
 }
+
+
+/* Footer section */
+.footer {
+  background-color: var(--secondary-bg);
+}
+.footer__inner {
+  padding: 43px 0 22px;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.footer__bottom-link {
+  font-size: 10px;
+}

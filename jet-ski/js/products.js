@@ -3,13 +3,22 @@ class Products {
     this.data = data;
   }
 
-  getCategory(category) {
-    return this.data.filter((item) => item.category === category);
+  addCards(root, category = 'all', rank = 0) {
+    const categoryList = this.getCategory(category, rank);
+    const cards = this.createCards(categoryList);
+    root.innerHTML = cards.join('');
   }
 
-  createCards(category) {
-    const categoryList = this.getCategory(category);
-    return categoryList.map((card) => this.createCard(card));
+  getCategory(category, rank) {
+    if (category === 'all') {
+      return [...this.data];
+    }
+
+    return this.data.filter((item) => item.category === category && item.rank >= rank);
+  }
+
+  createCards(arr) {
+    return arr.map((card) => this.createCard(card));
   }
 
   createCard(card) {
