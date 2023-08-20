@@ -554,6 +554,45 @@ li.slick-active button {
 .footer__top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 46px;
+  padding-right: 70px;
+}
+.footer__top-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+.footer__top-form {
+  display: flex;
+  align-items: center;
+  padding: 34px 0;
+}
+.footer__top-input {
+  padding: 9px 12px;
+  font-size: 14px;
+  border: none;
+}
+.footer__top-input::placeholder {
+  color: #c4c4c4;
+}
+.footer__top-btn {
+  padding: 10px 16px;
+  background-color: var(--primary-bg);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 1.3px;
+}
+.footer__top-link {
+  font-size: 14px;
+}
+.footer__top-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
 }
 
 .footer__bottom {
