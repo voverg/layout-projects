@@ -1,0 +1,14 @@
+<svg id="logo_site-logo_znak" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="44" height="44" transform="translate(475 11)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="logo_site-logo_znak-2" data-name="logo_site-logo_znak" transform="translate(-475 -11)" clip-path="url(#clip-path)">
+    <g id="Group_1" data-name="Group 1" transform="translate(160.526 329.127) rotate(-45)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="27.139" height="27.139" transform="matrix(0.94, -0.342, 0.342, 0.94, 432.48, 17.476)" fill="#569ddc"/>
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="27.139" height="27.139" transform="translate(432.612 17.344)" fill="#004685"/>
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="2.326" cy="2.326" r="2.326" transform="translate(451.492 28.979)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
