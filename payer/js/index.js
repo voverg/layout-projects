@@ -4,6 +4,10 @@ const burger = body.querySelector('.burger');
 const burgerBtn = burger.querySelector('.burger__btn');
 // Service blocks
 const service = body.querySelector('.service');
+// Modal block
+const openModal = body.querySelector('#login');
+const modal = body.querySelector('.modal');
+const closeModal = modal.querySelector('.modal__close');
 
 // Burger menu
 function toggleMenu() {
@@ -12,6 +16,8 @@ function toggleMenu() {
 }
 
 function handleService(event) {
+  if (window.innerWidth >= 800) return;
+  
   const target = event.target;
   const header = target.closest('.service__item-header');
 
@@ -31,4 +37,12 @@ burgerBtn.addEventListener('click', (event) => {
 });
 
 service.addEventListener('click', handleService);
+
+openModal.addEventListener('click', () => {
+  modal.classList.add('modal__show');
+  toggleMenu();
+});
+closeModal.addEventListener('click', () => {
+  modal.classList.remove('modal__show');
+});
 

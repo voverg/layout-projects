@@ -25,7 +25,7 @@
 
         <nav class="burger__nav">
           <h3 class="burger__title">личный кабинет</h3>
-          <a href="#" class="burger__link">Вход в личный кабинет</a>
+          <a href="#" class="burger__link" id="login">Вход в личный кабинет</a>
 
           <h3 class="burger__title">как это работает</h3>
           <a href="#" class="burger__link">Условия использования сервиса</a>
@@ -37,6 +37,8 @@
         <div class="burger__overlay"></div>
       </div>
     <!-- Конец секции с бургер меню -->
+
+    <img src="img/ic_help.svg" alt="help icon" class="help-icon">
     </div>
   </header>
 
@@ -47,7 +49,9 @@
         <label for="search__input" class="search__label">
           <input type="text" class="search__input" placeholder="Введите данные для поиска">
           <img src="img/ic_search.svg" alt="search icon" class="search__img">
+          <button class="search__form-btn">Найти</button>
         </label>
+        
         <div class="search__description">Чем больше параметров введено, тем полнее результаты поиска</div>
       </form>
     </div>
@@ -55,73 +59,105 @@
 
   <section class="service">
     <div class="container">
+      <div class="service__desktop-title">
+        <h2 class="service__desktop-head">Здесь можно оплатить</h2>
+        <div class="service__desktop-body">
+          <a href="#" class="service__desktop-body-link">Штрафы ГИБДД</a>
+          <a href="#" class="service__desktop-body-link">Судебные задолженности</a>
+          <a href="#" class="service__desktop-body-link">Налоги</a>
+          <a href="#" class="service__desktop-body-link">Услуги Росреестра</a>
+          <span>и другие услуги</span>
+        </div>
+      </div>
+
       <h2 class="service__title">Узнайте, как оплатить</h2>
 
       <div class="service__item">
-        <div class="service__item-header">
-          <div class="service__item-header-start">
-            <img src="img/ic_gibdd1.svg" alt="icon" class="service__icon">
-            <h2 class="service__item-title">Штрафы ГИБДД</h2>
+        <div class="service__item-content">
+          <div class="service__item-header">
+            <div class="service__item-header-start">
+              <img src="img/ic_gibdd1.svg" alt="icon" class="service__icon">
+              <h2 class="service__item-title">Штрафы ГИБДД</h2>
+            </div>
+            
+            <img src="img/ic_dropdown-arrow.svg" alt="dropdown arrow" class="service__arrow">
           </div>
-          
-          <img src="img/ic_dropdown-arrow.svg" alt="dropdown arrow" class="service__arrow">
+  
+          <div class="service__item-body">
+            <p class="service__item-text">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа. Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
+            <div class="service__item-head">ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!</div>
+            <p class="service__item-text">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+          </div>
         </div>
 
-        <div class="service__item-body">
-          <p class="service__item-text">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа. Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
-          <div class="service__item-head">ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!</div>
-          <p class="service__item-text">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
-        </div>
+        <img src="img/pic_block1.png" alt="" class="service__item-img">
+        
       </div>
 
       <div class="service__item">
-        <div class="service__item-header">
-          <div class="service__item-header-start">
-            <img src="img/ic_fssp.svg" alt="icon" class="service__icon">
-            <h2 class="service__item-title">Судебные задолженности</h2>
-          </div>
-          
-          <img src="img/ic_dropdown-arrow.svg" alt="dropdown arrow" class="service__arrow">
-        </div>
+        <img src="img/pic_block2.png" alt="" class="service__item-img">
 
-        <div class="service__item-body">
-          <p class="service__item-text">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства. Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
-          <div class="service__item-head">УДОБНО!</div>
-          <p class="service__item-text">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
+        <div class="service__item-content">
+          <div class="service__item-header">
+            <div class="service__item-header-start">
+              <img src="img/ic_fssp.svg" alt="icon" class="service__icon">
+              <h2 class="service__item-title">Судебные задолженности</h2>
+            </div>
+            
+            <img src="img/ic_dropdown-arrow.svg" alt="dropdown arrow" class="service__arrow">
+          </div>
+  
+          <div class="service__item-body">
+            <p class="service__item-text">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства. Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+            <div class="service__item-head">УДОБНО!</div>
+            <p class="service__item-text">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
+          </div>
         </div>
+        
       </div>
 
       <div class="service__item">
-        <div class="service__item-header">
-          <div class="service__item-header-start">
-            <img src="img/ic_nalog.svg" alt="icon" class="service__icon">
-            <h2 class="service__item-title">Налоги</h2>
+        <div class="service__item-content">
+          <div class="service__item-header">
+            <div class="service__item-header-start">
+              <img src="img/ic_nalog.svg" alt="icon" class="service__icon">
+              <h2 class="service__item-title">Налоги</h2>
+            </div>
+            
+            <img src="img/ic_dropdown-arrow.svg" alt="dropdown arrow" class="service__arrow">
           </div>
-          
-          <img src="img/ic_dropdown-arrow.svg" alt="dropdown arrow" class="service__arrow">
+  
+          <div class="service__item-body">
+            <p class="service__item-text">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</p>
+            <div class="service__item-head">ВАЖНО!</div>
+            <p class="service__item-text">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
+          </div>
         </div>
 
-        <div class="service__item-body">
-          <p class="service__item-text">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</p>
-          <div class="service__item-head">ВАЖНО!</div>
-          <p class="service__item-text">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
+        <img src="img/pic_block3.png" alt="" class="service__item-img">
+        
       </div>
 
       <div class="service__item">
-        <div class="service__item-header">
-          <div class="service__item-header-start">
-            <img src="img/ic_rr.svg" alt="icon" class="service__icon">
-            <h2 class="service__item-title">Услуги Росреестра</h2>
-          </div>
-          
-          <img src="img/ic_dropdown-arrow.svg" alt="dropdown arrow" class="service__arrow">
-        </div>
+        <img src="img/pic_block4.png" alt="" class="service__item-img">
 
-        <div class="service__item-body">
-          <p class="service__item-text">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
-          <div class="service__item-head">НЕТ КОДА?</div>
-          <p class="service__item-text">Если у вас ещё нет кода платежа, перейдите на сайт <a href="" class="service__item-link">rosreestr.ru</a> и сформируйте запрос на оплату электронных услуг Росреестра.</p>
+        <div class="service__item-content">
+          <div class="service__item-header">
+            <div class="service__item-header-start">
+              <img src="img/ic_rr.svg" alt="icon" class="service__icon">
+              <h2 class="service__item-title">Услуги Росреестра</h2>
+            </div>
+            
+            <img src="img/ic_dropdown-arrow.svg" alt="dropdown arrow" class="service__arrow">
+          </div>
+  
+          <div class="service__item-body">
+            <p class="service__item-text">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
+            <div class="service__item-head">НЕТ КОДА?</div>
+            <p class="service__item-text">Если у вас ещё нет кода платежа, перейдите на сайт <a href="" class="service__item-link">rosreestr.ru</a> и сформируйте запрос на оплату электронных услуг Росреестра.</p>
+          </div>
         </div>
+        
       </div>
 
 
@@ -166,6 +202,22 @@
   <footer class="footer">
     <p class="footer__text">Created by <a href="https://github.com/voverg" class="footer__link" rel="noopener noreferrer" target="_blank">Voverg</a></p>
   </footer>
+
+
+  <!-- Modal section -->
+  <div class="modal">
+    <div class="modal__content">
+      <form class="modal__form">
+        <p class="modal__close">&times;</p>
+        <h3 class="modal__title">Введите логин и пароль для входа в Личный кабинет</h3>
+        <input type="text" class="modal__input" placeholder="Логин">
+        <input type="text" class="modal__input" placeholder="Пароль">
+        <button class="modal__btn">Войти</button>
+      </form>
+      <a href="#" class="modal__link">Напомнить пароль</a>
+      <a href="#" class="modal__link">Регистрация</a>
+    </div>    
+  </div>
 
 
   <script src="js/index.js"></script>

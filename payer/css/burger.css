@@ -9,6 +9,8 @@
   background: transparent;
   border: none;
   transition: 0.4s;
+  cursor: pointer;
+  outline: none;
 }
 
 .burger__lines,
@@ -60,7 +62,7 @@
   width: 80%;
   height: 100%;
   position: fixed;
-  top: 48px;
+  top: 50px;
   right: -100%;
   padding: 20px;
   z-index: 20;
@@ -120,7 +122,24 @@
 
 /* For desktop */
 @media (min-width: 800px) {
-  .burger {
-    display: none;
+   /* burger btn */
+ .burger__btn {
+    left: 0;
+    top: 10px;
+  }
+
+  /*Burger menu*/
+  .burger__nav {
+    width: 25%;
+    top: 70px;
+    left: -100%;
+  }
+
+  .burger_active .burger__nav {
+    left: 0;
+  }
+
+  .burger__overlay {
+    top: 70px;
   }
 }
