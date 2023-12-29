@@ -1,6 +1,6 @@
 # <a name='nav'>Payer</a>
 
-Это вёрстка учебного сайта. Вы можете посмотреть демо-версию сайта на [GitHub Pages по этой ссылке](https://voverg.github.io/layout-projects/payer'Посмотреть демо-версию')
+Это вёрстка учебного сайта. Вы можете посмотреть демо-версию сайта на [GitHub Pages по этой ссылке](https://voverg.github.io/layout-projects/payer 'Посмотреть демо-версию')
 
 - [Описание](#description)
 
